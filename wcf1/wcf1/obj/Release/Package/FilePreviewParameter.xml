@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="servicioswcf" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^d:\\user\\documents\\visual\ studio\ 2013\\Projects\\wcf1\\wcf1\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^d:\\user\\documents\\visual\ studio\ 2013\\Projects\\wcf1\\wcf1\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="programacionpwEntities-Web.config Connection String" description="" value="metadata=res://*/modelo1.csdl|res://*/modelo1.ssdl|res://*/modelo1.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=VIBECOHACK;Initial Catalog=programacionpw;Persist Security Info=True;User ID=sa;Password=allispossible;MultipleActiveResultSets=True;Application Name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="d:\\user\\documents\\visual\ studio\ 2013\\Projects\\wcf1\\wcf1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='programacionpwEntities']/@connectionString" />
+  </parameter>
+</parameters>

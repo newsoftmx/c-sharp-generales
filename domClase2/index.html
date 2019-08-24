@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html  lang="es">
+<head>
+    <title>Dom y JS</title>
+    <script src="js/jsGeneral.js"></script>
+</head>
+<body>
+    <!--Aprendamos como indicar un texto para cuando el navegador 
+        no pueda ejecutar javascript-->
+    <noscript>
+        <p>
+            Lo siento, no puede cargar la pagina, su navegador no puede mostrar javascript
+        </p>
+    </noscript>
+    <div>
+        <p>
+            <label id="lblCambiar" > Si se cumple la condición este texto cambiara</label>
+            <input type="text" id="texto1" />
+            <input type="button" onclick="estructuraIF()" value="Aceptar" />
+            <br />
+            <label id="lblCambiar2"> Si escribe un 1 esto cambiara</label>
+            <input type="text" id="texto2" />
+            <input type="text" id="texto3" />
+            <input type="button" onclick="estructuraIFParametro(texto2.value, texto3.value)" value="Aceptar" />
+            <input type="button" onclick="estructuraIFValor('Hola')" value="Clic para valor directo" /><br />
+
+            <label>Escriba el valor del producto</label><input type="text" id="costo" />
+            <label>Impuesto</label><input type="text" id="impuesto" />
+            <label>Su compra actual es por un monto de $ </label><label id="totalCompra">0.0</label>
+            <input type="button" value="Calcular Compra" onclick="calcularTotalCompra(costo.value, precioTotal)" /><br />
+            <input type="text" id="ciudad" list="ciudadesGTO" />
+            <label id="lblCiudad"></label>
+            <input type="button" value="Verifica Disponibilidad" onclick="verificarDisponibilidad(ciudad.value)" />
+            <br />
+            
+            <datalist id="ciudadesGTO">
+                <option value="León de los Aldama"></option>
+                <option value="Silao" />
+                <option value="Celaya" />
+            </datalist>
+            <input type="week" id="" />
+            <select ><li></li></select>
+            <input type="number" min="5" max="10" id="" /><br />
+            <input type="image" value="archivo" id="" /><br />
+            <input type="tel" id=""/><br />
+            <input type="email" id="" /><br />
+            <input type="date" id="" /><br />
+            <input type="datetime" id="" /><br />
+            <input type="file" id="archivo" /><br />
+            <input type="email" id="" /><br />
+            <input type="button" value="Probar" onclick="estructuraIFElse" />
+        </p>
+    </div>
+</body>
+</html>

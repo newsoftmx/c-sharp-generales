@@ -1,0 +1,34 @@
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\obj\Debug\Examen del pony.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\csc.exe
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\csc.exe.config
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\csc.rsp
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\csi.exe
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\csi.rsp
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.CodeAnalysis.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.CSharp.Core.targets
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\Microsoft.VisualBasic.Core.targets
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\System.AppContext.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\System.Collections.Immutable.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\System.Diagnostics.StackTrace.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\System.IO.FileSystem.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\System.IO.FileSystem.Primitives.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\System.Reflection.Metadata.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\vbc.exe
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\vbc.exe.config
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\vbc.rsp
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\VBCSCompiler.exe
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\roslyn\VBCSCompiler.exe.config
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\Examen del pony.dll.config
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\Examen del pony.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\Examen del pony.pdb
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\obj\Debug\Examen del pony.dll
+d:\user\documents\visual studio 2017\Projects\Examen del pony\Examen del pony\obj\Debug\Examen del pony.pdb

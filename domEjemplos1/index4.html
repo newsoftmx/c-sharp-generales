@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body onmousemove="obtenerCoordenadas(event);">
+    <form id="formulario">
+        <div>
+            <span  id="nombres">Nombre:</span>
+            <input type="text" name="nombre" id="nombre" />
+            <label id="prueba"> Holas</label>
+            <input type="button" id="botonPersonalizado" value="Pulsa aqui" />
+        </div>
+    </form>
+    <canvas id="canv" width="400" height="400" 
+            style="border:1px solid #000000;">
+    Sorry, no puedo mostrar el dibujo u objeto</canvas>
+    <p>
+        <label>x</label><input type="text" id="ejex" />
+        <label>y</label><input type="text" id="ejey" />
+    </p>
+    <script>
+        function obtenerCoordenadas(event) {
+            
+            x = event.clientX;
+            y = event.clientY;
+            
+            document.getElementById("ejex").value = x;
+            document.getElementById("ejey").value = y;
+            /*ahora pasamod al body para obtener accionar la funcion */
+        }
+        //document.getElementById("nombre").disabled = true;
+        document.getElementById("nombre").style.color = "#A52";
+        document.getElementById("nombre").style.fontSize = "2em";
+    </script>
+</body>
+</html>

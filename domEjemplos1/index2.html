@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/jsGeneral.js"></script>
+</head>
+<body>
+    <div>
+        <p>
+            Usted escribio el país: 
+            <input type="text" id="pais" />
+            <input type="button" id="buscar" value="Clic para ejecutar"
+                   onclick="escribeFunción()" />
+            <input type="text" id="confirmacion"
+                   onmouseover="fueraPagina()" />
+        </p>
+    </div>
+    <script>
+        /*Método Prompt, permitirá introducir información
+        la cual podrá ser utilizada en el formulario
+        o el control*/
+        var pais, confirmar;
+        pais = prompt("Escriba su país de origen: ");
+        document.getElementById("pais").value = pais;
+        confirmar = confirm("¿Asistira al congreso?");
+        document.getElementById("confirmacion").value = confirmar;
+        function escribeFunción() {
+            alert("Hola a todos");
+        }
+    </script>
+</body>
+</html>

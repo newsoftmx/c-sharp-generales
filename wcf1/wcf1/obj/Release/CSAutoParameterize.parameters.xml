@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="programacionpwEntities-Web.config Connection String" description="programacionpwEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/modelo1.csdl|res://*/modelo1.ssdl|res://*/modelo1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=VIBECOHACK;initial catalog=programacionpw;persist security info=True;user id=sa;password=allispossible;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="d:\\user\\documents\\visual\ studio\ 2013\\Projects\\wcf1\\wcf1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='programacionpwEntities']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ejemplosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ejemplos.dbo.clientes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apePaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apeMaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="edad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ejemplosModelStoreContainer">
+    <EntitySet Name="clientes" EntityType="Self.clientes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[clientes].[id] AS [id], 
+[clientes].[nombre] AS [nombre], 
+[clientes].[apePaterno] AS [apePaterno], 
+[clientes].[apeMaterno] AS [apeMaterno], 
+[clientes].[edad] AS [edad]
+FROM [dbo].[clientes] AS [clientes]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

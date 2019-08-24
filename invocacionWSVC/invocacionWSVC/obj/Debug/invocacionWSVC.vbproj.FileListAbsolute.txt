@@ -1,0 +1,15 @@
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\bin\Debug\invocacionWSVC.exe.config
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\bin\Debug\invocacionWSVC.exe
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\bin\Debug\invocacionWSVC.pdb
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\bin\Debug\invocacionWSVC.xml
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.Form1.resources
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.Resources.resources
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.vbproj.GenerateResource.Cache
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.exe
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.xml
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.pdb
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.Form2.resources
+D:\user\Documents\Visual Studio 2013\Projects\invocacionWSVC\invocacionWSVC\bin\Debug\invocacionWSVC.exe.config
+D:\user\Documents\Visual Studio 2013\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.exe
+D:\user\Documents\Visual Studio 2013\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.xml
+D:\user\Documents\Visual Studio 2013\Projects\invocacionWSVC\invocacionWSVC\obj\Debug\invocacionWSVC.pdb

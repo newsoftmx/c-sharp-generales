@@ -1,0 +1,5 @@
+d:\vibeco\documents\visual studio 2012\Projects\masterPageCSSClase\masterPageCSSClase\bin\masterPageCSSClase.dll
+d:\vibeco\documents\visual studio 2012\Projects\masterPageCSSClase\masterPageCSSClase\bin\masterPageCSSClase.pdb
+d:\vibeco\documents\visual studio 2012\Projects\masterPageCSSClase\masterPageCSSClase\obj\Debug\masterPageCSSClase.csprojResolveAssemblyReference.cache
+d:\vibeco\documents\visual studio 2012\Projects\masterPageCSSClase\masterPageCSSClase\obj\Debug\masterPageCSSClase.dll
+d:\vibeco\documents\visual studio 2012\Projects\masterPageCSSClase\masterPageCSSClase\obj\Debug\masterPageCSSClase.pdb

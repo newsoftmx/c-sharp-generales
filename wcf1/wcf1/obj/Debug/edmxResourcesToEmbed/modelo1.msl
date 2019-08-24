@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="programacionpwModelStoreContainer" CdmEntityContainer="programacionpwEntities">
+    <EntitySetMapping Name="deportistas">
+      <EntityTypeMapping TypeName="programacionpwModel.deportista">
+        <MappingFragment StoreEntitySet="deportista">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+          <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="nivel" ColumnName="nivel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

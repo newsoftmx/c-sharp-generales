@@ -1,0 +1,95 @@
+﻿*{
+    /*con el comodin * indicaremos
+        que estos estilos aplicán
+        a todo el documento html*/
+    margin:0;
+    padding:0;
+}
+/*ahora colocaré mi propia fuente*/
+@font-face {
+	/*Con esta linea mandamos llamar la fuente*/
+    font-family: 'ebrimaregular';
+	/*Ahora indicamos donde se encuentra, recuerden que 
+        debera subir un nivel, por ello indico el ../ y se separan con comas*/
+    src: url('../fonts/ebrima-webfont.eot');
+    src: url('../fonts/ebrima-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ebrima-webfont.woff') format('woff'),
+         url('../fonts/ebrima-webfont.ttf') format('truetype'),
+         url('../fonts/ebrima-webfont.svg#ebrimaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background:#b9bdc1;
+    color:#333;
+    /*Indico mi tipo de letra*/
+    font-family:"ebrima", Helvetica, sans-serif;
+    font-size:2em; /*M = 16px = 12pt = 1em*/ 
+    /*Importante  aplicar el orden alfábetico en el css*/
+}
+h1{
+    color:#a5d228;
+    /*para alinear antes usabamos float, ahora aplicamos
+        el uso de margin*/
+    margin:0 auto;
+    text-align:center;
+    /*colocar una sombra con codigo, aquí colocaremos
+        3 valores, la distancia respecto a x, luego la
+        distancia respecto a y, ... y al final el blur, 
+        el blur es un efecto borroso
+        despues aplico una transparencia  con rgba, este
+        valor va en hexadecimal, y al final su opacidad, 
+        la cual es 1=100% 0=0% 0.5=50%*/
+    text-shadow:5px 5px 10px rgba(0, 99,168, 0.5);
+}
+/*declaro estilos para el header, nav, footer*/
+header, nav, footer{
+    background:#0063a8;
+    /*hacemos los bordes curvos*/
+    border-radius:0.5em;
+    /*Ahora indico que se centren*/
+    margin:0.5em auto;
+    /*Indico un ancho máximo para estos elementos*/
+    max-width:960px;
+    padding:0.25em;
+    text-align:center;
+}
+/*ahora indico los valores para los section*/
+section#contenedor{
+    /**/
+    /*background:#fff;*/
+    margin:0.5em auto;
+    max-width:960px;
+    padding:0;
+    text-align:center;
+}
+section#principal, aside{
+    background:#0063a8;
+    border-radius:0.5em;
+    /*En lugar float también nos auxiliamos
+        con el estilo display*/
+    display:inline-block;
+    margin:0.25em auto;
+    max-height:960px;
+    min-height:200px;
+    padding:0.25em;
+    text-align:center;
+    /*establecemos una alineación vertical, 
+        esto ayuda a que se alinie*/
+    vertical-align:top;
+    width:60%;
+}
+article{
+    background:#b9bdc1;
+    border-radius:0.5em;
+    min-height:140px;
+    padding:0.25em;
+}
+aside{
+    width:35%;
+}
+
+
+
+
+

@@ -1,0 +1,9 @@
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\bin\Debug\usoListas.exe.config
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\bin\Debug\usoListas.exe
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\bin\Debug\usoListas.pdb
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\obj\Debug\usoListas.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\obj\Debug\usoListas.Form1.resources
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\obj\Debug\usoListas.Properties.Resources.resources
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\obj\Debug\usoListas.csproj.GenerateResource.Cache
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\obj\Debug\usoListas.exe
+d:\user\documents\visual studio 2013\Projects\usoListas\usoListas\obj\Debug\usoListas.pdb

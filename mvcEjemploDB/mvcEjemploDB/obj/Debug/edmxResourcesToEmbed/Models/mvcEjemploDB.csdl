@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ejemplosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apePaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apeMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="edad" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ejemplosEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="clientes" EntityType="Self.clientes" />
+    <FunctionImport Name="actClientes">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="apePaterno" Mode="In" Type="String" />
+      <Parameter Name="apeMaterno" Mode="In" Type="String" />
+      <Parameter Name="edad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="busClientes" ReturnType="Collection(ejemplosModel.busClientes_Result)" />
+    <FunctionImport Name="busIdClientes" ReturnType="Collection(ejemplosModel.busIdClientes_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="guaClientes">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="apePaterno" Mode="In" Type="String" />
+      <Parameter Name="apeMaterno" Mode="In" Type="String" />
+      <Parameter Name="edad" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="busClientes_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="apePaterno" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="apeMaterno" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="edad" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="busIdClientes_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="apePaterno" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="apeMaterno" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="edad" Nullable="false" />
+  </ComplexType>
+</Schema>

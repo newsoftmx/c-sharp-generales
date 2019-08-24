@@ -1,0 +1,10 @@
+﻿body {
+    background-color:#b6ff00;
+    color:#b6ff00 !important;
+}
+p
+{
+    background-image:url(/image/Peenguins.jpg);
+    width:100%;
+    color: #fff;
+}

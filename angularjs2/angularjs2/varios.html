@@ -1,0 +1,22 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="anidados">
+    <div ng-controller="controlAnidado">
+        <label>Primitive</label>     <input type="text" ng-model="name">
+        <label>Object</label>     <input type="text" ng-model="user.name">
+        <div class="nested" ng-controller="MyNestedCtrl">
+            <label>Primitive</label>       <input type="text" ng-model="name">
+            <label>Primitive with explicit $parent reference</label>      
+             <input type="text" ng-model="$parent.name">
+            <label>Object</label>       <input type="text" ng-model="user.name">
+        </div>
+    </div>
+</body>
+</html>

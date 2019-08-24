@@ -1,0 +1,6 @@
+d:\user\documents\visual studio 2013\Projects\sesiones2\sesiones2\bin\sesiones2.dll.config
+d:\user\documents\visual studio 2013\Projects\sesiones2\sesiones2\bin\sesiones2.dll
+d:\user\documents\visual studio 2013\Projects\sesiones2\sesiones2\bin\sesiones2.pdb
+d:\user\documents\visual studio 2013\Projects\sesiones2\sesiones2\obj\Debug\sesiones2.dll
+d:\user\documents\visual studio 2013\Projects\sesiones2\sesiones2\obj\Debug\sesiones2.pdb
+d:\user\documents\visual studio 2013\Projects\sesiones2\sesiones2\obj\Debug\sesiones2.csprojResolveAssemblyReference.cache

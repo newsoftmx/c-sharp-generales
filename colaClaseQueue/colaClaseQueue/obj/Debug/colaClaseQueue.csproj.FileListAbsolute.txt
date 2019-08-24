@@ -1,0 +1,6 @@
+d:\user\documents\visual studio 2017\Projects\colaClaseQueue\colaClaseQueue\bin\Debug\colaClaseQueue.exe.config
+d:\user\documents\visual studio 2017\Projects\colaClaseQueue\colaClaseQueue\bin\Debug\colaClaseQueue.exe
+d:\user\documents\visual studio 2017\Projects\colaClaseQueue\colaClaseQueue\bin\Debug\colaClaseQueue.pdb
+d:\user\documents\visual studio 2017\Projects\colaClaseQueue\colaClaseQueue\obj\Debug\colaClaseQueue.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2017\Projects\colaClaseQueue\colaClaseQueue\obj\Debug\colaClaseQueue.exe
+d:\user\documents\visual studio 2017\Projects\colaClaseQueue\colaClaseQueue\obj\Debug\colaClaseQueue.pdb

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta description="Descripción del sitio web" />
+    <meta charset="utf-8"/>
+    <meta keywords="Palabras o frases claves, palabras, frases, claves" />
+    <!--Ahora enlazamos nuestra hoja de estilo
+        el atributo media indicara para que 
+        dispositivo van estos estilos, el valor
+        predeterminado es all, atributo rel es para
+        establecer el tipo de relacion, ahora la 
+        tipo es texto css-->
+    <link media="all" rel="stylesheet" type="text/css" href="css/stlGeneral.css" />
+
+    <title>Primer P&aacute;gina HTML5</title>
+</head>
+<body>
+    <!--Lo primero que va en un sitio web es el header
+        importante no confundir con head, aquí ira la 
+        información, para eso se usa la etiqueta
+        semantica header, es la cabecera dentro del cuerpo-->
+    <header>
+        <!--Si coloco mas de un h1 mi sitio pierde
+            relevancia en los buscadores, ademas de 
+            perder semantica, usea otra etiqueta para html5-->
+        <h1>Titulo</h1>
+        <!--Esta etique indica al navegador que se
+            cargara una imagen-->
+        <figure>
+            coloca tu logo
+            <!--Sirve para indicar el texto de mi logo-->
+            <figcaption>Texto de mi logotipo</figcaption>
+        </figure>
+    </header>
+    <!--despues de la cabecera se configura el menu-->
+    <nav>
+        aqu&iacute; va nuestro men&uacute;
+    </nav>
+    <!--Despues de esto va las secciones de contenido
+        ahora se usan section y articule, anteriormente
+        se usaban divs, un ejemplo es section serian 
+        los post, y un articulo seria el post, por ello
+        declaro primero un seccion -->
+    <section>
+        <!--La etiqueta hgroup permite agrupar mis
+            titulos de h, esto para que no pierdan
+            relevancia los titulos de la pagina-->
+        <hgroup>
+            <h1>T&iacute;tulo secundario o encabezado</h1>
+            <h2>sub encabezado o subt&iacute;</h2>
+        </hgroup>
+        <!--Dentro del section se -->
+        <article>
+            Este es un art&iacute;
+            <!--Realizamos una subseccion-->
+            <section>Esto es una subsecci&oacute;</section>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </article>
+    </section>
+
+    <footer>
+        <!-- los robots buscadores de contenido
+            interpretaran como final o footer de la
+            pagina web-->
+        Mi WEB desarrollada por NEWSOFT
+    </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\bin\wcfClase2.dll.config
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\bin\wcfClase2.dll
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\bin\wcfClase2.pdb
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\bin\EntityFramework.dll
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\bin\EntityFramework.SqlServer.dll
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\bin\EntityFramework.xml
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\bin\EntityFramework.SqlServer.xml
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\obj\Debug\wcfClase2.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\obj\Debug\wcfClase2.dll
+d:\user\documents\visual studio 2013\Projects\wcfClase2\wcfClase2\obj\Debug\wcfClase2.pdb

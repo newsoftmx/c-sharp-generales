@@ -1,0 +1,12 @@
+e:\vibeco\documents\visual studio 2013\Projects\angularjs1\angularjs1\bin\angularjs1.dll.config
+e:\vibeco\documents\visual studio 2013\Projects\angularjs1\angularjs1\bin\angularjs1.dll
+e:\vibeco\documents\visual studio 2013\Projects\angularjs1\angularjs1\bin\angularjs1.pdb
+e:\vibeco\documents\visual studio 2013\Projects\angularjs1\angularjs1\obj\Debug\angularjs1.csprojResolveAssemblyReference.cache
+e:\vibeco\documents\visual studio 2013\Projects\angularjs1\angularjs1\obj\Debug\angularjs1.dll
+e:\vibeco\documents\visual studio 2013\Projects\angularjs1\angularjs1\obj\Debug\angularjs1.pdb
+D:\user\Documents\Visual Studio 2013\Projects\angularjs1\angularjs1\bin\angularjs1.dll.config
+D:\user\Documents\Visual Studio 2013\Projects\angularjs1\angularjs1\bin\angularjs1.dll
+D:\user\Documents\Visual Studio 2013\Projects\angularjs1\angularjs1\bin\angularjs1.pdb
+D:\user\Documents\Visual Studio 2013\Projects\angularjs1\angularjs1\obj\Debug\angularjs1.csprojResolveAssemblyReference.cache
+D:\user\Documents\Visual Studio 2013\Projects\angularjs1\angularjs1\obj\Debug\angularjs1.dll
+D:\user\Documents\Visual Studio 2013\Projects\angularjs1\angularjs1\obj\Debug\angularjs1.pdb

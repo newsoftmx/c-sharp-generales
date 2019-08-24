@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://elGuille/WebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://elGuille/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Conversor de grados Fahrenheit a grados centígrados (Celsius)</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://elGuille/WebServices">
+      <s:element name="FaC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FaCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FaCResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CaFResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FaCSoapIn">
+    <wsdl:part name="parameters" element="tns:FaC" />
+  </wsdl:message>
+  <wsdl:message name="FaCSoapOut">
+    <wsdl:part name="parameters" element="tns:FaCResponse" />
+  </wsdl:message>
+  <wsdl:message name="CaFSoapIn">
+    <wsdl:part name="parameters" element="tns:CaF" />
+  </wsdl:message>
+  <wsdl:message name="CaFSoapOut">
+    <wsdl:part name="parameters" element="tns:CaFResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConversorSoap">
+    <wsdl:operation name="FaC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Convierte de Fahrenheit a Celsius, devuelve un valor Double</wsdl:documentation>
+      <wsdl:input message="tns:FaCSoapIn" />
+      <wsdl:output message="tns:FaCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CaF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Convierte de Celsius a Fahrenheit, devuelve un valor Double</wsdl:documentation>
+      <wsdl:input message="tns:CaFSoapIn" />
+      <wsdl:output message="tns:CaFSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConversorSoap" type="tns:ConversorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FaC">
+      <soap:operation soapAction="http://elGuille/WebServices/FaC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaF">
+      <soap:operation soapAction="http://elGuille/WebServices/CaF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConversorSoap12" type="tns:ConversorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FaC">
+      <soap12:operation soapAction="http://elGuille/WebServices/FaC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaF">
+      <soap12:operation soapAction="http://elGuille/WebServices/CaF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Conversor">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Conversor de grados Fahrenheit a grados centígrados (Celsius)</wsdl:documentation>
+    <wsdl:port name="ConversorSoap" binding="tns:ConversorSoap">
+      <soap:address location="http://www.elguille.info/Net/WebServices/CelsiusFahrenheit.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConversorSoap12" binding="tns:ConversorSoap12">
+      <soap12:address location="http://www.elguille.info/Net/WebServices/CelsiusFahrenheit.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

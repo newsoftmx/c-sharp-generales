@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ejemplosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="clientes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="apePaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="apeMaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="edad" Type="int" Nullable="false" />
+        </EntityType>
+        <Function Name="actClientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="apePaterno" Type="nvarchar" Mode="In" />
+          <Parameter Name="apeMaterno" Type="nvarchar" Mode="In" />
+          <Parameter Name="edad" Type="int" Mode="In" />
+        </Function>
+        <Function Name="busClientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="busIdClientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="guaClientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="apePaterno" Type="nvarchar" Mode="In" />
+          <Parameter Name="apeMaterno" Type="nvarchar" Mode="In" />
+          <Parameter Name="edad" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="ejemplosModelStoreContainer">
+          <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ejemplosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="clientes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="apePaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="apeMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="edad" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ejemplosEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="clientes" EntityType="Self.clientes" />
+          <FunctionImport Name="actClientes">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="apePaterno" Mode="In" Type="String" />
+            <Parameter Name="apeMaterno" Mode="In" Type="String" />
+            <Parameter Name="edad" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="busClientes" ReturnType="Collection(ejemplosModel.busClientes_Result)" />
+          <FunctionImport Name="busIdClientes" ReturnType="Collection(ejemplosModel.busIdClientes_Result)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="guaClientes">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="apePaterno" Mode="In" Type="String" />
+            <Parameter Name="apeMaterno" Mode="In" Type="String" />
+            <Parameter Name="edad" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="busClientes_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="apePaterno" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="apeMaterno" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="edad" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="busIdClientes_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="apePaterno" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="apeMaterno" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="edad" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ejemplosModelStoreContainer" CdmEntityContainer="ejemplosEntities1">
+          <EntitySetMapping Name="clientes">
+            <EntityTypeMapping TypeName="ejemplosModel.clientes">
+              <MappingFragment StoreEntitySet="clientes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+                <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="actClientes" FunctionName="ejemplosModel.Store.actClientes" />
+          <FunctionImportMapping FunctionImportName="busClientes" FunctionName="ejemplosModel.Store.busClientes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ejemplosModel.busClientes_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+                <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="busIdClientes" FunctionName="ejemplosModel.Store.busIdClientes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ejemplosModel.busIdClientes_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+                <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="guaClientes" FunctionName="ejemplosModel.Store.guaClientes" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

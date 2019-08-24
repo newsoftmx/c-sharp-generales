@@ -1,0 +1,5 @@
+d:\vibeco\documents\visual studio 2012\Projects\masterPage1\masterPage1\bin\masterPage1.dll
+d:\vibeco\documents\visual studio 2012\Projects\masterPage1\masterPage1\bin\masterPage1.pdb
+d:\vibeco\documents\visual studio 2012\Projects\masterPage1\masterPage1\obj\Release\masterPage1.csprojResolveAssemblyReference.cache
+d:\vibeco\documents\visual studio 2012\Projects\masterPage1\masterPage1\obj\Release\masterPage1.dll
+d:\vibeco\documents\visual studio 2012\Projects\masterPage1\masterPage1\obj\Release\masterPage1.pdb

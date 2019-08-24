@@ -1,0 +1,116 @@
+﻿body { 
+    background-color:#0094ff;
+    color:#fff;
+}
+p
+{
+    color: #ffd800;
+}
+.lopez
+{
+    font-family: Arial;
+    color: #f00;
+    font-size: x-large;
+}
+#karla {
+    color: purple;
+    font-family: 'Century Gothic';
+}
+
+#menu {
+	width:100% !important;
+	height:68px;
+	float:right;
+	margin:0px 0px 0px 0px;
+}
+.menu ul {
+    /*la lista se desplegara sin estilo*/
+	list-style:none;
+	padding:0;
+	margin:0px 0px 0px 0px;	
+}
+.menu ul ul {
+    /*las sublistas se desplegaran sin estilo, osea sin imagen, circle, etc.*/
+	list-style:none;
+	padding:0;
+	margin:0px 0px 0px 0px;	
+	float:left;
+}
+.menu a{
+    /*permitira desplegar cada elemento listado en bloque,
+        respetando su anchura*/
+	display:block;
+	width:100px;
+	height:25px;
+	color:#FFF;
+    /*le quitamos la decoración al texto que aparezca como hiperviunculo*/
+	text-decoration:none;
+	text-align:center;/*alineamos el texto de cada elemento de tipo hipervinculo*/
+}
+.menu a:hover{
+    /*cuando el mouse este arriba de un hipervinculo*/
+	background:#015c31;
+}
+.menu li li a{
+    /*cada subelemento li que se muestre deberá contener el sig. color de fondo*/
+	background:#b60a0a;
+}
+.menu li{
+	float:left;
+}
+
+#marginCM {
+    margin: 10cm 2cm 4cm 5cm;
+    background-color:#AAA;
+    border:double;
+}
+#marginEM{
+    margin:5em 5em 5em 5em;
+    background-color:#b60a0a;
+    border:groove;
+    border-color:#ffd800;
+}
+#aplicacionPadding {
+    margin: 5px 5px 5px 5px;
+    border: ridge;
+    border-color: #b60a0a;
+    background-color: purple;
+    padding: 6em 6em 6em 6em;
+}
+
+
+
+#general {
+    background-color:#AAA;
+    background:url(../image/repeatx.png) repeat-x;
+    width:100%;
+    
+}
+#header {
+    background-color:#ff6a00;
+    width:1030px;
+    height:450px;
+    margin:0 auto 0 auto;
+}
+#logo {
+    background-color:#4cff00;
+    /*background-image:url(http://teresianolagos.edu.mx/imagenes/BARRASSECCIONESEXTRAS.jpg);*/
+    /*background-image:url(../image/logo.jpg);*/
+    background:url(../image/logo.jpg) no-repeat;
+    width:330px;
+    height:450px;
+    float:left;
+}
+#banner {
+    float:right;
+    background-color:#b60a0a;/*cambiar el color del banner*/
+    width:600px;
+    height:300px;
+}
+#barramenu {
+	width:500px;
+	height:30px;
+    background-color: #f8c705;
+	float:left;
+	margin:0px 0px 0px 0px;
+}

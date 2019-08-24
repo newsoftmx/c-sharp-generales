@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaGuardarSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apePaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apeMaterno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estatus" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="nivel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaGuardarSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deportistaGuardarSPResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaActualizarSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apePaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apeMaterno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estatus" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="nivel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaActualizarSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deportistaActualizarSPResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaEliminarSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaEliminarSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deportistaEliminarSPResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deprtistaBuscarTodosSP">
+        <s:complexType />
+      </s:element>
+      <s:element name="deprtistaBuscarTodosSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deprtistaBuscarTodosSPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaBuscarIDSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaBuscarIDSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deportistaBuscarIDSPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaNombres10">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deportistaNombres10Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deportistaNombres10Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="deportistaGuardarSPSoapIn">
+    <wsdl:part name="parameters" element="tns:deportistaGuardarSP" />
+  </wsdl:message>
+  <wsdl:message name="deportistaGuardarSPSoapOut">
+    <wsdl:part name="parameters" element="tns:deportistaGuardarSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="deportistaActualizarSPSoapIn">
+    <wsdl:part name="parameters" element="tns:deportistaActualizarSP" />
+  </wsdl:message>
+  <wsdl:message name="deportistaActualizarSPSoapOut">
+    <wsdl:part name="parameters" element="tns:deportistaActualizarSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="deportistaEliminarSPSoapIn">
+    <wsdl:part name="parameters" element="tns:deportistaEliminarSP" />
+  </wsdl:message>
+  <wsdl:message name="deportistaEliminarSPSoapOut">
+    <wsdl:part name="parameters" element="tns:deportistaEliminarSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="deprtistaBuscarTodosSPSoapIn">
+    <wsdl:part name="parameters" element="tns:deprtistaBuscarTodosSP" />
+  </wsdl:message>
+  <wsdl:message name="deprtistaBuscarTodosSPSoapOut">
+    <wsdl:part name="parameters" element="tns:deprtistaBuscarTodosSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="deportistaBuscarIDSPSoapIn">
+    <wsdl:part name="parameters" element="tns:deportistaBuscarIDSP" />
+  </wsdl:message>
+  <wsdl:message name="deportistaBuscarIDSPSoapOut">
+    <wsdl:part name="parameters" element="tns:deportistaBuscarIDSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="deportistaNombres10SoapIn">
+    <wsdl:part name="parameters" element="tns:deportistaNombres10" />
+  </wsdl:message>
+  <wsdl:message name="deportistaNombres10SoapOut">
+    <wsdl:part name="parameters" element="tns:deportistaNombres10Response" />
+  </wsdl:message>
+  <wsdl:portType name="servicioVCSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deportistaGuardarSP">
+      <wsdl:input message="tns:deportistaGuardarSPSoapIn" />
+      <wsdl:output message="tns:deportistaGuardarSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deportistaActualizarSP">
+      <wsdl:input message="tns:deportistaActualizarSPSoapIn" />
+      <wsdl:output message="tns:deportistaActualizarSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deportistaEliminarSP">
+      <wsdl:input message="tns:deportistaEliminarSPSoapIn" />
+      <wsdl:output message="tns:deportistaEliminarSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deprtistaBuscarTodosSP">
+      <wsdl:input message="tns:deprtistaBuscarTodosSPSoapIn" />
+      <wsdl:output message="tns:deprtistaBuscarTodosSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deportistaBuscarIDSP">
+      <wsdl:input message="tns:deportistaBuscarIDSPSoapIn" />
+      <wsdl:output message="tns:deportistaBuscarIDSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deportistaNombres10">
+      <wsdl:input message="tns:deportistaNombres10SoapIn" />
+      <wsdl:output message="tns:deportistaNombres10SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="servicioVCSoap" type="tns:servicioVCSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaGuardarSP">
+      <soap:operation soapAction="http://tempuri.org/deportistaGuardarSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaActualizarSP">
+      <soap:operation soapAction="http://tempuri.org/deportistaActualizarSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaEliminarSP">
+      <soap:operation soapAction="http://tempuri.org/deportistaEliminarSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deprtistaBuscarTodosSP">
+      <soap:operation soapAction="http://tempuri.org/deprtistaBuscarTodosSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaBuscarIDSP">
+      <soap:operation soapAction="http://tempuri.org/deportistaBuscarIDSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaNombres10">
+      <soap:operation soapAction="http://tempuri.org/deportistaNombres10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="servicioVCSoap12" type="tns:servicioVCSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaGuardarSP">
+      <soap12:operation soapAction="http://tempuri.org/deportistaGuardarSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaActualizarSP">
+      <soap12:operation soapAction="http://tempuri.org/deportistaActualizarSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaEliminarSP">
+      <soap12:operation soapAction="http://tempuri.org/deportistaEliminarSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deprtistaBuscarTodosSP">
+      <soap12:operation soapAction="http://tempuri.org/deprtistaBuscarTodosSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaBuscarIDSP">
+      <soap12:operation soapAction="http://tempuri.org/deportistaBuscarIDSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deportistaNombres10">
+      <soap12:operation soapAction="http://tempuri.org/deportistaNombres10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="servicioVC">
+    <wsdl:port name="servicioVCSoap" binding="tns:servicioVCSoap">
+      <soap:address location="http://localhost:82/serviciosVC/servicioVC.asmx" />
+    </wsdl:port>
+    <wsdl:port name="servicioVCSoap12" binding="tns:servicioVCSoap12">
+      <soap12:address location="http://localhost:82/serviciosVC/servicioVC.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

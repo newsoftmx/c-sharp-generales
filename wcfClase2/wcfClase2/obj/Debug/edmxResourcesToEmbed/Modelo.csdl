@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="programacionpwModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="deportista">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apePaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apeMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="edad" Type="Int32" Nullable="false" />
+    <Property Name="estatus" Type="Boolean" Nullable="false" />
+    <Property Name="nivel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="programacionpwEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="deportistas" EntityType="Self.deportista" />
+    <FunctionImport Name="spBusDep" ReturnType="Collection(programacionpwModel.spBusDep_Result)" />
+    <FunctionImport Name="spBusDepID" ReturnType="Collection(programacionpwModel.spBusDepID_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDepAct">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="apePaterno" Mode="In" Type="String" />
+      <Parameter Name="apeMaterno" Mode="In" Type="String" />
+      <Parameter Name="edad" Mode="In" Type="Int32" />
+      <Parameter Name="estatus" Mode="In" Type="Boolean" />
+      <Parameter Name="nivel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spDepGuardar">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="apePaterno" Mode="In" Type="String" />
+      <Parameter Name="apeMaterno" Mode="In" Type="String" />
+      <Parameter Name="edad" Mode="In" Type="Int32" />
+      <Parameter Name="estatus" Mode="In" Type="Boolean" />
+      <Parameter Name="nivel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spEliDepID">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spBusDep_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="apePaterno" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="apeMaterno" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="edad" Nullable="false" />
+    <Property Type="Boolean" Name="estatus" Nullable="false" />
+    <Property Type="String" Name="nivel" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spBusDepID_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="apePaterno" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="apeMaterno" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="edad" Nullable="false" />
+    <Property Type="Boolean" Name="estatus" Nullable="false" />
+    <Property Type="String" Name="nivel" Nullable="false" MaxLength="50" />
+  </ComplexType>
+</Schema>

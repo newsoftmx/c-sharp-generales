@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="js/app.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="otro/angular.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-app>
+    <div ng-controller="controlador">
+        <p>El valor de la variabl es: "{{value}}"</p>
+        <p></p>
+    </div>
+    <div ng-controller="controlador2">
+        <p>{{value}}</p>
+    </div>
+    <div ng-controller="incremento">
+        <p ng-init="incrementValue(1)">
+            El valor se incremento a {{value}}
+        </p>
+    </div>
+    <div ng-controller="carlos">
+        <p>{{getIncrementedValue()}}</p>
+    </div>
+</body>
+</html>

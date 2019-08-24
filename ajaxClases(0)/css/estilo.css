@@ -1,0 +1,45 @@
+﻿body {
+}
+.CompletionList {
+    padding:5px 0;
+    margin:2px 0 0;
+    height:100px;
+    overflow:auto;
+    position:absolute;
+    border:1px solid #ccc;
+        border:1px solid rgba(0,0,0,0.2);
+        *border-right-width:2px;
+        *border-bottom-width:2px;
+        -webkit-border-radius:6px;
+            -moz-border-radius:6px;
+                border-radius:6px;
+                -webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+            -moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+                box-shadow:0 5px 10px rgba(0,0,0,0.2);
+        -webkit-background-clip:padding-box;
+            -moz-background-clip:padding;
+                background-clip:padding-box;
+    background-color:#64b5f2;
+    cursor:pointer;
+}
+/*Asi se motrara la lista*/
+.CompletionItemListItem {
+    display:block;
+    padding:3px 20px;
+    clear:both;
+    font-weight:normal;
+    line-height:20px;
+    color:#fcfbfb;
+    white-space:nowrap;
+}
+/*Cuando tengamos seleccionados */
+.CompletionListHighlightedItem {
+    color:#92f8b9;
+    padding:3px 20px;
+    text-decoration:none;
+    /*color de fondo del item al seleccionarse*/
+    background-color:#043cf2;
+    background-repeat:repeat-x;
+    outline:0;
+    background-image:linear-gradient(to bottom, # 0088cc, #0077b3);
+}

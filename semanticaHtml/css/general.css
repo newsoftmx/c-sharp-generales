@@ -1,0 +1,55 @@
+﻿/*usamo el comodin * para que los estilos
+    indicados ahi, se apliquen a todo el
+    documento html*/
+*{
+    /*esto aplica a todo el documento*/
+    margin:0px;
+    padding:0px;
+}
+body {
+    background:#b9bdc1;
+    color:#333;
+    font-family:sans-serif,'Tempus Sans ITC';
+    font-size:2em;
+}
+h1{
+    color:#a5d228;
+    margin:0 auto;
+    text-shadow:5px 5px 10px rgba(0,99,168,0.5);
+}
+header, nav, footer{
+    background:#0063a8;
+    /*hace las esquinas de cada div a curvas*/
+    border-radius:0.5em;
+    margin:0.5em auto;
+    max-width:960px;
+    padding:0.25em;
+    text-align:center;
+}
+section#contenedor{
+    margin:0.5em auto;
+    max-width:960px;
+    padding:0px;
+    text-align:center;
+}
+section#principal, aside{
+    background:#0063a8;
+    border-radius:0.5em;
+    display:inline-block;
+    margin:0.25em auto;
+    max-height:960px;
+    min-height:200px;
+    padding:0.25em;
+    text-align:center;
+    vertical-align:top;
+    width:60%;
+}
+article {
+    background: #b9bdc1;
+    border-radius:0.5em;
+    min-height:140px;
+    padding:0.25em;
+}
+aside{
+    width:35%;
+}

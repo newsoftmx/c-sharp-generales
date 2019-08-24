@@ -1,0 +1,6 @@
+D:\user\Documents\Visual Studio 2013\Projects\sesiones\sesiones\bin\sesiones.dll.config
+D:\user\Documents\Visual Studio 2013\Projects\sesiones\sesiones\bin\sesiones.dll
+D:\user\Documents\Visual Studio 2013\Projects\sesiones\sesiones\bin\sesiones.pdb
+D:\user\Documents\Visual Studio 2013\Projects\sesiones\sesiones\obj\Debug\sesiones.csprojResolveAssemblyReference.cache
+D:\user\Documents\Visual Studio 2013\Projects\sesiones\sesiones\obj\Debug\sesiones.dll
+D:\user\Documents\Visual Studio 2013\Projects\sesiones\sesiones\obj\Debug\sesiones.pdb

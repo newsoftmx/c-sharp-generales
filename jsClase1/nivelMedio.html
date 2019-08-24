@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script language="Javascript">
+        //El operador typeof variable devuelve una cadena de texto que describe el tipo de datos al que pertenece la variabl
+        var ciudad = "Oviedo";
+        var edad = 6;
+        var carnet = true;
+        document.write("<BR>La variable ciudad es de tipo: " + typeof ciudad + "<BR>");
+        document.write("La variable edad es de tipo: " + typeof edad + "<BR>");
+        document.write("La variable carnet es de tipo: " + typeof carnet + "<BR>");
+
+        //eval calcula la cadena de caracteres que se ha de transmitir y devuelve el resultado como valor. si la cadena 
+        //contiene caracteres que no se pueden interpretar como parte de la operación de cálculo, emite un mensaje de error.
+        var expresion, resultado;
+        expresion = prompt("Introduce la operación a realizar", "");
+        resultado = eval(expresion);
+        alert("El resultado de la operacion es " + resultado);
+    </script>
+
+</body>
+</html>

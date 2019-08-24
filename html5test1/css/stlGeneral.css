@@ -1,0 +1,37 @@
+﻿/*1 primero definir estilos para etiquetas, por ejemplo
+    head, body, p, h1, div, span, etc.*/
+/*2 Definir los estilos para los id's osea los 
+    IDENTIFICADORES (id), recuerde que aquí en la CSS
+    se declaran con # (alamohadilla) y en html se declaran
+    con ela tributo id <div id="juan">*/
+/*3 al final se definen los estilos para las clases, las
+    clases son elementos que se pueden repetir n veces en
+    el codigo de html, osea la invocación, ejemplo
+    .nombreClase{estilos}, */
+/*4 Todos los estilos se ordenan en base a la aparicion de
+    nuestra pagina web, tomando en cuenta las relgas 
+    anteriores,*/
+/*5 Los atributos se declaran de la siguiente manerá, 
+    {atributo1:valor1; atributo2:valor2;...atributoN:
+    valorN;}*/
+/*6 Todos los atributos se ordenan alfabeticamente, por 
+    ejemplo color, display, width*/
+/*7 Si tenemos estilos para el comodin *, o para las 
+    etiquetas head y body, estos
+    son los primeros que se tienen que definir*/
+/*8 En el body se debe de declarar un tamaño y puntos de fuente 
+    global*/
+/*9 Si se tienen codigos para el reseteo de un elemento o
+    control html, estos deberan colocarse antes de cualquier
+    estilo*/
+/*El asteristo indica todos, osea el estilo que coloque
+    dentro del * se aplicará a todo el documento*/
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background:#905151 url("../img/fondo.jpg");
+    color:#351070;
+    font-size:16px;
+}

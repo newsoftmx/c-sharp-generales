@@ -1,0 +1,43 @@
+﻿@model mvcEjemploDB.Models.clientes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>clientes</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.apePaterno)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.apePaterno)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.apeMaterno)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.apeMaterno)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.edad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.edad)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

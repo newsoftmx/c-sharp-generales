@@ -1,0 +1,6 @@
+d:\user\documents\visual studio 2017\Projects\pila_stack\pila_stack\obj\Debug\pila_stack.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2017\Projects\pila_stack\pila_stack\bin\Debug\pila_stack.exe.config
+d:\user\documents\visual studio 2017\Projects\pila_stack\pila_stack\bin\Debug\pila_stack.exe
+d:\user\documents\visual studio 2017\Projects\pila_stack\pila_stack\bin\Debug\pila_stack.pdb
+d:\user\documents\visual studio 2017\Projects\pila_stack\pila_stack\obj\Debug\pila_stack.exe
+d:\user\documents\visual studio 2017\Projects\pila_stack\pila_stack\obj\Debug\pila_stack.pdb

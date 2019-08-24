@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<empresa>
+  <empleados>
+    <nombre>
+      Ivonne
+    </nombre>
+    <domicilio>San Juan de los Lagos</domicilio>
+  </empleados>
+  <empleados>
+    <nombre>
+      Dago
+    </nombre>
+    <domicilio>Irapuato</domicilio>
+  </empleados>
+</empresa>

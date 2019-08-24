@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage1.Master.cs" Inherits="masterPageCSSClase.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/estilos.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.menu ul ul').css({
+            /*esto es un comentario es un script*/
+            position: "absolute",
+            display: "none"
+        });
+
+        $('.menu li').hover(function () {
+            $(this).find('>ul').stop(true, true).slideDown('slow');
+        }, function () {
+            $(this).find('>ul').stop(true, true).slideUp('slow');
+        });
+    });
+	</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="general">
+        <div id="header">
+            <div id="logo">
+            </div>
+            <div id="banner">
+                <p>Aquí va un banner</p>
+            </div>
+            <div id="barramenu" class="menu">
+                <ul>
+                    <li><a>inicio</a></li>
+                    <li><a>nosotros</a>
+                    <ul>
+                        <li><a>Misión</a></li>
+                        <li><a>Visión</a></li>
+                    </ul></li>
+                    <li><a>productos</a></li>
+                    <li><a>servicios</a></li>
+                    <li><a>contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="cuerpo">
+            <asp:ContentPlaceHolder ID="contenido" runat="server">
+                Contenido por default sin cambiar
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="cambioMaster" runat="server">
+
+                <asp:LinkButton ID="lkbCambioMaterPage" runat="server" OnClick="lkbCambioMaterPage_Click">Cambiar a Mater Page 2</asp:LinkButton>
+
+            </asp:ContentPlaceHolder>
+           
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+           
+        </div>
+    </div>
+
+
+    </form>
+
+
+</body>
+</html>

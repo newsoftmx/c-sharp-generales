@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="programacionpwModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="deportista">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apePaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apeMaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="edad" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" Nullable="false" />
+    <Property Name="nivel" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Function Name="spBusDep" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spBusDepID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDepAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="apePaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="apeMaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="edad" Type="int" Mode="In" />
+    <Parameter Name="estatus" Type="bit" Mode="In" />
+    <Parameter Name="nivel" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spDepGuardar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="apePaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="apeMaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="edad" Type="int" Mode="In" />
+    <Parameter Name="estatus" Type="bit" Mode="In" />
+    <Parameter Name="nivel" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spEliDepID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="programacionpwModelStoreContainer">
+    <EntitySet Name="deportista" EntityType="Self.deportista" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

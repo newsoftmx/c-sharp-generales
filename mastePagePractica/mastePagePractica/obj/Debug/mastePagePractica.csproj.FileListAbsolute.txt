@@ -1,0 +1,5 @@
+d:\vibeco\documents\visual studio 2012\Projects\mastePagePractica\mastePagePractica\bin\mastePagePractica.dll
+d:\vibeco\documents\visual studio 2012\Projects\mastePagePractica\mastePagePractica\bin\mastePagePractica.pdb
+d:\vibeco\documents\visual studio 2012\Projects\mastePagePractica\mastePagePractica\obj\Debug\mastePagePractica.csprojResolveAssemblyReference.cache
+d:\vibeco\documents\visual studio 2012\Projects\mastePagePractica\mastePagePractica\obj\Debug\mastePagePractica.dll
+d:\vibeco\documents\visual studio 2012\Projects\mastePagePractica\mastePagePractica\obj\Debug\mastePagePractica.pdb

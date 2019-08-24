@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ActualizarClientes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Materno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idcuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantcredito" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Creditodisponible" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Visita" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Idautorizacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ciudad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Codpos" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numife" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarClientesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarClientes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Materno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idcuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantcredito" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Creditodisponible" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Visita" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Idautorizacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ciudad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Codpos" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numife" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GuardarClientesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Conectividad">
+        <s:complexType />
+      </s:element>
+      <s:element name="ConectividadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConectividadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarServiciosReg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Idts" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fechavencimiento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarServiciosRegResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GuardarServiciosRegResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarMovimientos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Idcliente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Idsr" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Condiciones" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Debe" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarMovimientosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GuardarMovimientosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarConMov">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Idmovcredito" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldoinsoluto" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Abonocapital" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Intereses" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarConMovResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GuardarConMovResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarMovCredito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Idcliente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Idmovimiento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Meses" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarMovCreditoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GuardarMovCreditoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarClienteID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarClienteIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarClienteIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarIdtsRefe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Idts" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarIdtsRefeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarIdtsRefeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarVisitas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarVisitasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarVisitasResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarClientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="BuscarClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarClientesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarConsecutivoMoviCred">
+        <s:complexType />
+      </s:element>
+      <s:element name="BuscarConsecutivoMoviCredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarConsecutivoMoviCredResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarMovCred">
+        <s:complexType />
+      </s:element>
+      <s:element name="BuscarMovCredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarMovCredResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarMovimientos">
+        <s:complexType />
+      </s:element>
+      <s:element name="BuscarMovimientosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarMovimientosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarConseMoviID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarConseMoviIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarConseMoviIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarMovCredID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarMovCredIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarMovCredIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarMovimientoID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarMovimientoIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarMovimientoIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld3">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorld3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorld3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld4">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorld4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorld4Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ActualizarClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarClientes" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarClientes" />
+  </wsdl:message>
+  <wsdl:message name="GuardarClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConectividadSoapIn">
+    <wsdl:part name="parameters" element="tns:Conectividad" />
+  </wsdl:message>
+  <wsdl:message name="ConectividadSoapOut">
+    <wsdl:part name="parameters" element="tns:ConectividadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarServiciosRegSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarServiciosReg" />
+  </wsdl:message>
+  <wsdl:message name="GuardarServiciosRegSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarServiciosRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarMovimientosSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarMovimientos" />
+  </wsdl:message>
+  <wsdl:message name="GuardarMovimientosSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarMovimientosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarConMovSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarConMov" />
+  </wsdl:message>
+  <wsdl:message name="GuardarConMovSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarConMovResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarMovCreditoSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarMovCredito" />
+  </wsdl:message>
+  <wsdl:message name="GuardarMovCreditoSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarMovCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarClienteIDSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarClienteID" />
+  </wsdl:message>
+  <wsdl:message name="BuscarClienteIDSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarClienteIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarIdtsRefeSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarIdtsRefe" />
+  </wsdl:message>
+  <wsdl:message name="BuscarIdtsRefeSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarIdtsRefeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarVisitasSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarVisitas" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarVisitasSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarVisitasResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarClientes" />
+  </wsdl:message>
+  <wsdl:message name="BuscarClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarConsecutivoMoviCredSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarConsecutivoMoviCred" />
+  </wsdl:message>
+  <wsdl:message name="BuscarConsecutivoMoviCredSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarConsecutivoMoviCredResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMovCredSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarMovCred" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMovCredSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarMovCredResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMovimientosSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarMovimientos" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMovimientosSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarMovimientosResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarConseMoviIDSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarConseMoviID" />
+  </wsdl:message>
+  <wsdl:message name="BuscarConseMoviIDSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarConseMoviIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMovCredIDSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarMovCredID" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMovCredIDSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarMovCredIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMovimientoIDSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarMovimientoID" />
+  </wsdl:message>
+  <wsdl:message name="BuscarMovimientoIDSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarMovimientoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld3SoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld3" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld3SoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorld3Response" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld4SoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld4" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld4SoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorld4Response" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="ActualizarClientes">
+      <wsdl:input message="tns:ActualizarClientesSoapIn" />
+      <wsdl:output message="tns:ActualizarClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarClientes">
+      <wsdl:input message="tns:GuardarClientesSoapIn" />
+      <wsdl:output message="tns:GuardarClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Conectividad">
+      <wsdl:input message="tns:ConectividadSoapIn" />
+      <wsdl:output message="tns:ConectividadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarServiciosReg">
+      <wsdl:input message="tns:GuardarServiciosRegSoapIn" />
+      <wsdl:output message="tns:GuardarServiciosRegSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMovimientos">
+      <wsdl:input message="tns:GuardarMovimientosSoapIn" />
+      <wsdl:output message="tns:GuardarMovimientosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarConMov">
+      <wsdl:input message="tns:GuardarConMovSoapIn" />
+      <wsdl:output message="tns:GuardarConMovSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMovCredito">
+      <wsdl:input message="tns:GuardarMovCreditoSoapIn" />
+      <wsdl:output message="tns:GuardarMovCreditoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteID">
+      <wsdl:input message="tns:BuscarClienteIDSoapIn" />
+      <wsdl:output message="tns:BuscarClienteIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarIdtsRefe">
+      <wsdl:input message="tns:BuscarIdtsRefeSoapIn" />
+      <wsdl:output message="tns:BuscarIdtsRefeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVisitas">
+      <wsdl:input message="tns:ActualizarVisitasSoapIn" />
+      <wsdl:output message="tns:ActualizarVisitasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClientes">
+      <wsdl:input message="tns:BuscarClientesSoapIn" />
+      <wsdl:output message="tns:BuscarClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarConsecutivoMoviCred">
+      <wsdl:input message="tns:BuscarConsecutivoMoviCredSoapIn" />
+      <wsdl:output message="tns:BuscarConsecutivoMoviCredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovCred">
+      <wsdl:input message="tns:BuscarMovCredSoapIn" />
+      <wsdl:output message="tns:BuscarMovCredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovimientos">
+      <wsdl:input message="tns:BuscarMovimientosSoapIn" />
+      <wsdl:output message="tns:BuscarMovimientosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarConseMoviID">
+      <wsdl:input message="tns:BuscarConseMoviIDSoapIn" />
+      <wsdl:output message="tns:BuscarConseMoviIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovCredID">
+      <wsdl:input message="tns:BuscarMovCredIDSoapIn" />
+      <wsdl:output message="tns:BuscarMovCredIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovimientoID">
+      <wsdl:input message="tns:BuscarMovimientoIDSoapIn" />
+      <wsdl:output message="tns:BuscarMovimientoIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld3">
+      <wsdl:input message="tns:HelloWorld3SoapIn" />
+      <wsdl:output message="tns:HelloWorld3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld4">
+      <wsdl:input message="tns:HelloWorld4SoapIn" />
+      <wsdl:output message="tns:HelloWorld4SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ActualizarClientes">
+      <soap:operation soapAction="http://tempuri.org/ActualizarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarClientes">
+      <soap:operation soapAction="http://tempuri.org/GuardarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Conectividad">
+      <soap:operation soapAction="http://tempuri.org/Conectividad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarServiciosReg">
+      <soap:operation soapAction="http://tempuri.org/GuardarServiciosReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMovimientos">
+      <soap:operation soapAction="http://tempuri.org/GuardarMovimientos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarConMov">
+      <soap:operation soapAction="http://tempuri.org/GuardarConMov" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMovCredito">
+      <soap:operation soapAction="http://tempuri.org/GuardarMovCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteID">
+      <soap:operation soapAction="http://tempuri.org/BuscarClienteID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarIdtsRefe">
+      <soap:operation soapAction="http://tempuri.org/BuscarIdtsRefe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVisitas">
+      <soap:operation soapAction="http://tempuri.org/ActualizarVisitas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClientes">
+      <soap:operation soapAction="http://tempuri.org/BuscarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarConsecutivoMoviCred">
+      <soap:operation soapAction="http://tempuri.org/BuscarConsecutivoMoviCred" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovCred">
+      <soap:operation soapAction="http://tempuri.org/BuscarMovCred" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovimientos">
+      <soap:operation soapAction="http://tempuri.org/BuscarMovimientos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarConseMoviID">
+      <soap:operation soapAction="http://tempuri.org/BuscarConseMoviID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovCredID">
+      <soap:operation soapAction="http://tempuri.org/BuscarMovCredID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovimientoID">
+      <soap:operation soapAction="http://tempuri.org/BuscarMovimientoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld3">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld4">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ActualizarClientes">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarClientes">
+      <soap12:operation soapAction="http://tempuri.org/GuardarClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Conectividad">
+      <soap12:operation soapAction="http://tempuri.org/Conectividad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarServiciosReg">
+      <soap12:operation soapAction="http://tempuri.org/GuardarServiciosReg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMovimientos">
+      <soap12:operation soapAction="http://tempuri.org/GuardarMovimientos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarConMov">
+      <soap12:operation soapAction="http://tempuri.org/GuardarConMov" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMovCredito">
+      <soap12:operation soapAction="http://tempuri.org/GuardarMovCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteID">
+      <soap12:operation soapAction="http://tempuri.org/BuscarClienteID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarIdtsRefe">
+      <soap12:operation soapAction="http://tempuri.org/BuscarIdtsRefe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVisitas">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarVisitas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClientes">
+      <soap12:operation soapAction="http://tempuri.org/BuscarClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarConsecutivoMoviCred">
+      <soap12:operation soapAction="http://tempuri.org/BuscarConsecutivoMoviCred" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovCred">
+      <soap12:operation soapAction="http://tempuri.org/BuscarMovCred" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovimientos">
+      <soap12:operation soapAction="http://tempuri.org/BuscarMovimientos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarConseMoviID">
+      <soap12:operation soapAction="http://tempuri.org/BuscarConseMoviID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovCredID">
+      <soap12:operation soapAction="http://tempuri.org/BuscarMovCredID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMovimientoID">
+      <soap12:operation soapAction="http://tempuri.org/BuscarMovimientoID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld3">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld4">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.1.101:100/WSVibeBanco.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.1.101:100/WSVibeBanco.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+    //alert("Su primer pagina usando DOM");
+</script>
+
+    <p id="parrafo1">Comenzamos el aprendizaje de DOM</p>
+    <p>Esto es el parrafo2</p>
+    <p> Dom es muy potente</p>
+    <p>
+            <input type="text" id="texto1" />
+    </p>
+    <p id="parrafoReceptor">Todo se borrará</p>
+    <p>
+        <input type="text" id="texto2" value="Cotenido de la caja 2" />
+        <input type="text" id="texto3" value="Cotenido de la caja 3"  />
+        <input type="text" id="texto4" value="Cotenido de la caja 4"  />
+    </p>
+    <script>
+        /*Obtengo el objeto raiz de mi web*/
+        var objetoHTMLWEB = document.documentElement;
+        //obtengo el primer nodo
+        var objetoHead = objetoHTMLWEB.firstChild;
+        //obtengo el último nodo
+        var objetoBody = objetoHTMLWEB.lastChild;
+        //obteno¿go el total de nodos
+        var numeroNodos = objetoHTMLWEB.childNodes.length;
+        //obtengo los nodos apuntando directamente
+        var objetoHeadChildNodes = objetoHTMLWEB.childNodes[0];
+        var objetoBodyChildNodes = objetoHTMLWEB.childNodes[1];
+        /*También podre acceder directamente a cada nodo
+        o elemento, haciendo uso de la propiedad document*/
+        var objetoBodyDirecto = document.body;
+        var objetoHeadDirecto = document.head;
+        var objetoParrafo = document.getElementById("parrafo1").textContent;
+        alert("Ahora pasamos el contenido del parrafo1 al parrafoReceptor");
+        document.getElementById("parrafoReceptor").textContent = objetoParrafo.toString();
+
+        //var textoNuevo = document.getElementById("texto2").value;
+        //textoNuevo = textoNuevo + document.getElementById("texto3").value;
+        var textoNuevo = texto2.value + texto3.value + texto4.value;
+        alert("El valor de la variable textoNuevo es: " + textoNuevo);
+        alert("El contenido del parrafoReceptor cambiará");
+        document.getElementById("parrafoReceptor").textContent = textoNuevo;
+        alert("Cambiare el contenido del textbox4");
+        document.getElementById("texto4").value = texto2.value;
+    </script>
+</body>
+</html>

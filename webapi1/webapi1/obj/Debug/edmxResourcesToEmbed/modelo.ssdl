@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRMNewRestaurantWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="carrito">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="precio" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="categorias">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+    <Property Name="imagen" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ciudades">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="idCliente" />
+    </Key>
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="empresa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apePaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apeMaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="correo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rfc" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="telefono" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="calle" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="numero" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="cp" Type="int" Nullable="false" />
+    <Property Name="idColonia" Type="int" Nullable="false" />
+    <Property Name="calle1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="calle2" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="municipio" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+    <Property Name="saldo" Type="float" Nullable="false" />
+    <Property Name="observaciones" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="colonias">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cp" Type="int" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="idCiudad" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CRMNewRestaurantW.dbo.condiciones' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="condiciones">
+    <Key>
+      <PropertyRef Name="idCondiciones" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Name="idCondiciones" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CRMNewRestaurantW.dbo.consecutivoCarrito' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="consecutivoCarrito">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="idCarrito" />
+      <PropertyRef Name="idProducto" />
+      <PropertyRef Name="cantidad" />
+      <PropertyRef Name="precio" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="idCarrito" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="int" Nullable="false" />
+    <Property Name="precio" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="consecutivoPedido">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="idPedido" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="float" Nullable="false" />
+    <Property Name="precio" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="estados">
+    <Key>
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pedidos">
+    <Key>
+      <PropertyRef Name="idPedido" />
+    </Key>
+    <Property Name="idPedido" Type="int" Nullable="false" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="idCarrito" Type="int" Nullable="false" />
+    <Property Name="tipoVenta" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="destino" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="estatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="recibidoMatriz" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="facturar" Type="bit" Nullable="false" />
+    <Property Name="total" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productos">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idCategoria" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="imagen" Type="varbinary(max)" Nullable="false" />
+    <Property Name="costoProduccion" Type="float" Nullable="false" />
+    <Property Name="precio1" Type="float" Nullable="false" />
+    <Property Name="precio2" Type="float" Nullable="false" />
+    <Property Name="precio3" Type="float" Nullable="false" />
+    <Property Name="precio4" Type="float" Nullable="false" />
+    <Property Name="unidadMedida" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="existencia" Type="float" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+    <Property Name="estatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="observaciones" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="promociones">
+    <Key>
+      <PropertyRef Name="idPromocion" />
+    </Key>
+    <Property Name="idPromocion" Type="int" Nullable="false" />
+    <Property Name="idConsecutivoPromocion" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dias" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="precio" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contraseña" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apePaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apeMaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="calle" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="numero" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="colonia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ciudad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="observaciones" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="viewColonias">
+    <Key>
+      <PropertyRef Name="idColonia" />
+    </Key>
+    <Property Name="idColonia" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="cp" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_carrito_productos">
+    <End Role="productos" Type="Self.productos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="carrito" Type="Self.carrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="carrito">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ciudades_estados">
+    <End Role="estados" Type="Self.estados" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ciudades" Type="Self.ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="ciudades">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientes_colonias">
+    <End Role="colonias" Type="Self.colonias" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="clientes" Type="Self.clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="colonias">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="clientes">
+        <PropertyRef Name="idColonia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_colonias_ciudades">
+    <End Role="ciudades" Type="Self.ciudades" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="colonias" Type="Self.colonias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudades">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="colonias">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_consecutivoCarrito_carrito">
+    <End Role="carrito" Type="Self.carrito" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="consecutivoCarrito" Type="Self.consecutivoCarrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="carrito">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="consecutivoCarrito">
+        <PropertyRef Name="idCarrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_consecutivoPedido_pedidos">
+    <End Role="pedidos" Type="Self.pedidos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="consecutivoPedido" Type="Self.consecutivoPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedidos">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="consecutivoPedido">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_consecutivoPedido_productos">
+    <End Role="productos" Type="Self.productos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="consecutivoPedido" Type="Self.consecutivoPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="consecutivoPedido">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidos_carrito">
+    <End Role="carrito" Type="Self.carrito" Multiplicity="1" />
+    <End Role="pedidos" Type="Self.pedidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="carrito">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedidos">
+        <PropertyRef Name="idCarrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidos_clientes">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="pedidos" Type="Self.pedidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="pedidos">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_categorias">
+    <End Role="categorias" Type="Self.categorias" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="productos" Type="Self.productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorias">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="productos">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="CRMNewRestaurantWModelStoreContainer">
+    <EntitySet Name="carrito" EntityType="Self.carrito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="categorias" EntityType="Self.categorias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ciudades" EntityType="Self.ciudades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="colonias" EntityType="Self.colonias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="consecutivoPedido" EntityType="Self.consecutivoPedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="estados" EntityType="Self.estados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pedidos" EntityType="Self.pedidos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="productos" EntityType="Self.productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="promociones" EntityType="Self.promociones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="viewColonias" EntityType="Self.viewColonias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="condiciones" EntityType="Self.condiciones" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[condiciones].[idCondiciones] AS [idCondiciones], 
+[condiciones].[descripcion] AS [descripcion]
+FROM [dbo].[condiciones] AS [condiciones]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="consecutivoCarrito" EntityType="Self.consecutivoCarrito" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[consecutivoCarrito].[id] AS [id], 
+[consecutivoCarrito].[idCarrito] AS [idCarrito], 
+[consecutivoCarrito].[idProducto] AS [idProducto], 
+[consecutivoCarrito].[cantidad] AS [cantidad], 
+[consecutivoCarrito].[precio] AS [precio]
+FROM [dbo].[consecutivoCarrito] AS [consecutivoCarrito]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_carrito_productos" Association="Self.FK_carrito_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="carrito" EntitySet="carrito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ciudades_estados" Association="Self.FK_ciudades_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="ciudades" EntitySet="ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientes_colonias" Association="Self.FK_clientes_colonias">
+      <End Role="colonias" EntitySet="colonias" />
+      <End Role="clientes" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_colonias_ciudades" Association="Self.FK_colonias_ciudades">
+      <End Role="ciudades" EntitySet="ciudades" />
+      <End Role="colonias" EntitySet="colonias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_consecutivoCarrito_carrito" Association="Self.FK_consecutivoCarrito_carrito">
+      <End Role="carrito" EntitySet="carrito" />
+      <End Role="consecutivoCarrito" EntitySet="consecutivoCarrito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_consecutivoPedido_pedidos" Association="Self.FK_consecutivoPedido_pedidos">
+      <End Role="pedidos" EntitySet="pedidos" />
+      <End Role="consecutivoPedido" EntitySet="consecutivoPedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_consecutivoPedido_productos" Association="Self.FK_consecutivoPedido_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="consecutivoPedido" EntitySet="consecutivoPedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidos_carrito" Association="Self.FK_pedidos_carrito">
+      <End Role="carrito" EntitySet="carrito" />
+      <End Role="pedidos" EntitySet="pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidos_clientes" Association="Self.FK_pedidos_clientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="pedidos" EntitySet="pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_categorias" Association="Self.FK_productos_categorias">
+      <End Role="categorias" EntitySet="categorias" />
+      <End Role="productos" EntitySet="productos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,59 @@
+﻿#menu {
+    width: 80% !important;
+    height: 50px;
+    float: right;
+    margin: 50px 10px 0px 10px;
+    font-family: 'Segoe Print';
+    font-size: smaller;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0px 0px 30px;
+}
+
+    .menu ul ul {
+        list-style: none;
+        margin: 0;
+        margin: 0px 0px 0px 0px;
+        float: left;
+    }
+
+.menu a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    color: ##CC2EFA;
+    text-decoration: none;
+    text-align: center;
+}
+
+    .menu a:hover {
+        background: #4800ff;
+    }
+
+.menu li li a {
+    background: #48C8E9;
+}
+
+.menu li {
+    float: left;
+}
+
+p{
+    font-family: 'Segoe Print';
+    color: white;
+    font-size: xx-large;
+    text-align: justify;
+    margin-left: 0px;
+}
+
+body {
+    font-family: 'Segoe Print';
+    color: white;
+    background-color:gray;
+    font-size: small;
+    text-align: justify;
+    margin-left: 0px;
+}

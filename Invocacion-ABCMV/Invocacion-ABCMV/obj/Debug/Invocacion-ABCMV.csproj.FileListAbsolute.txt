@@ -1,0 +1,7 @@
+F:\maweb\3er\lsw\Invocacion-ABCMV\Invocacion-ABCMV\bin\Debug\Invocacion-ABCMV.exe.config
+D:\vibeco\Documents\Visual Studio 2012\WebSites\Invocacion-ABCMV\Invocacion-ABCMV\bin\Debug\Invocacion-ABCMV.exe.config
+D:\vibeco\Documents\Visual Studio 2012\WebSites\Invocacion-ABCMV\Invocacion-ABCMV\obj\Debug\Invocacion-ABCMV.csprojResolveAssemblyReference.cache
+D:\vibeco\Documents\Visual Studio 2012\WebSites\Invocacion-ABCMV\Invocacion-ABCMV\obj\Debug\Invocacion_ABCMV.form1.resources
+D:\vibeco\Documents\Visual Studio 2012\WebSites\Invocacion-ABCMV\Invocacion-ABCMV\obj\Debug\Invocacion_ABCMV.Properties.Resources.resources
+D:\vibeco\Documents\Visual Studio 2012\WebSites\Invocacion-ABCMV\Invocacion-ABCMV\obj\Debug\Invocacion-ABCMV.csproj.GenerateResource.Cache
+E:\vibeco\Documents\Visual Studio 2013\WebSites\Invocacion-ABCMV\Invocacion-ABCMV\bin\Debug\Invocacion-ABCMV.exe.config

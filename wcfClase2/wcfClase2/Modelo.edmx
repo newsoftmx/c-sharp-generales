@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="programacionpwModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="deportista">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="apePaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="apeMaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="edad" Type="int" Nullable="false" />
+          <Property Name="estatus" Type="bit" Nullable="false" />
+          <Property Name="nivel" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Function Name="spBusDep" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spBusDepID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spDepAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="apePaterno" Type="nvarchar" Mode="In" />
+          <Parameter Name="apeMaterno" Type="nvarchar" Mode="In" />
+          <Parameter Name="edad" Type="int" Mode="In" />
+          <Parameter Name="estatus" Type="bit" Mode="In" />
+          <Parameter Name="nivel" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spDepGuardar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="apePaterno" Type="nvarchar" Mode="In" />
+          <Parameter Name="apeMaterno" Type="nvarchar" Mode="In" />
+          <Parameter Name="edad" Type="int" Mode="In" />
+          <Parameter Name="estatus" Type="bit" Mode="In" />
+          <Parameter Name="nivel" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spEliDepID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="programacionpwModelStoreContainer">
+          <EntitySet Name="deportista" EntityType="Self.deportista" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="programacionpwModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="deportista">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="apePaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="apeMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="edad" Type="Int32" Nullable="false" />
+          <Property Name="estatus" Type="Boolean" Nullable="false" />
+          <Property Name="nivel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="programacionpwEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="deportistas" EntityType="Self.deportista" />
+          <FunctionImport Name="spBusDep" ReturnType="Collection(programacionpwModel.spBusDep_Result)" />
+          <FunctionImport Name="spBusDepID" ReturnType="Collection(programacionpwModel.spBusDepID_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spDepAct">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="apePaterno" Mode="In" Type="String" />
+            <Parameter Name="apeMaterno" Mode="In" Type="String" />
+            <Parameter Name="edad" Mode="In" Type="Int32" />
+            <Parameter Name="estatus" Mode="In" Type="Boolean" />
+            <Parameter Name="nivel" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spDepGuardar">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="apePaterno" Mode="In" Type="String" />
+            <Parameter Name="apeMaterno" Mode="In" Type="String" />
+            <Parameter Name="edad" Mode="In" Type="Int32" />
+            <Parameter Name="estatus" Mode="In" Type="Boolean" />
+            <Parameter Name="nivel" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spEliDepID">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spBusDep_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="apePaterno" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="apeMaterno" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="edad" Nullable="false" />
+          <Property Type="Boolean" Name="estatus" Nullable="false" />
+          <Property Type="String" Name="nivel" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spBusDepID_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="apePaterno" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="apeMaterno" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="edad" Nullable="false" />
+          <Property Type="Boolean" Name="estatus" Nullable="false" />
+          <Property Type="String" Name="nivel" Nullable="false" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="programacionpwModelStoreContainer" CdmEntityContainer="programacionpwEntities">
+          <EntitySetMapping Name="deportistas">
+            <EntityTypeMapping TypeName="programacionpwModel.deportista">
+              <MappingFragment StoreEntitySet="deportista">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+                <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="nivel" ColumnName="nivel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spBusDep" FunctionName="programacionpwModel.Store.spBusDep">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="programacionpwModel.spBusDep_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+                <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="nivel" ColumnName="nivel" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spBusDepID" FunctionName="programacionpwModel.Store.spBusDepID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="programacionpwModel.spBusDepID_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+                <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="nivel" ColumnName="nivel" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spDepAct" FunctionName="programacionpwModel.Store.spDepAct" />
+          <FunctionImportMapping FunctionImportName="spDepGuardar" FunctionName="programacionpwModel.Store.spDepGuardar" />
+          <FunctionImportMapping FunctionImportName="spEliDepID" FunctionName="programacionpwModel.Store.spEliDepID" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

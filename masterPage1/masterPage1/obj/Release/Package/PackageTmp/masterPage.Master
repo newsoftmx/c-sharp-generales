@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="masterPage1.masterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <!--Esta es el area de las secciones-->
+        <header>Aqui escribimos o colocamos todo lo que queremoas que aparezca en la parte superior</header>
+        <section>
+            <!-- este contenedor es el general-->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Contenedor3" runat="server">
+            </asp:ContentPlaceHolder>
+            </section>
+        <section>
+            <asp:Calendar runat="server"></asp:Calendar>
+        </section>
+        <aside> barra de estado</aside>
+        <footer></footer>
+    </div>
+    </form>
+</body>
+</html>

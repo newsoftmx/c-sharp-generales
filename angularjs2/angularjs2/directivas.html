@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="http://code.jquery.com/jquery-git2.js"></script>
+  
+</head>
+<body ng-app="miAplicacion">
+    <!--Desabilitar boton usando un checkbox-->
+    <label>
+        <input type="checkbox" ng-model="checked" />Ocultar boton
+    </label>
+    <button ng-disabled="checked">Press me</button>
+    <div>
+        <p>
+            <label>
+                <input type="checkbox" ng-model="detalles" />
+                Soltero
+            </label>
+            <div ng-disabled="detalles">
+                Escribe nombre del conyuge:
+                <input type="text" ng-disabled="detalles" />
+                <br />
+                Escribe tu telefono:
+                <input type="tel" ng-disabled="detalles" />
+                <br />
+                <button ng-disabled="detalles">Press me</button>
+            </div>
+        </p>
+    </div>
+    <my-widget>
+        <p>Clic y ve lo que sucede</p>
+    </my-widget>
+    <my-widget>
+        <p>Clic y ve lo que sucede</p>
+    </my-widget>
+    <my-widget>
+        <p>Clic y ve lo que sucede</p>
+    </my-widget>
+</body>
+</html>

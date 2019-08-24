@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/estilos.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <header>
+
+        </header>
+        <section>
+            <!-- este contenedor es el general-->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <asp:LinkButton ID="lkbCambiarPagina" runat="server" OnClick="lkbCambiarPagina_Click">Cambiar Pagina</asp:LinkButton>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Contenedor3" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Contenedor4" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </section>
+        <section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </section>
+        <section>
+            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        </section>
+        <aside> barra de estado</aside>
+        <footer></footer>
+    </div>
+    </form>
+</body>
+</html>

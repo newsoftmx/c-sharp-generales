@@ -1,0 +1,5 @@
+d:\vibeco\documents\visual studio 2012\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+d:\vibeco\documents\visual studio 2012\Projects\WebApplication2\WebApplication2\bin\WebApplication2.dll
+d:\vibeco\documents\visual studio 2012\Projects\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+d:\vibeco\documents\visual studio 2012\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+d:\vibeco\documents\visual studio 2012\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb

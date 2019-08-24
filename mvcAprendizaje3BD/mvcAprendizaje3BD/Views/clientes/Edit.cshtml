@@ -1,0 +1,63 @@
+﻿@model mvcAprendizaje3BD.Models.clientes
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>clientes</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nombre)
+            @Html.ValidationMessageFor(model => model.nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.aprePaterno)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.aprePaterno)
+            @Html.ValidationMessageFor(model => model.aprePaterno)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.apeMaterno)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.apeMaterno)
+            @Html.ValidationMessageFor(model => model.apeMaterno)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.edad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.edad)
+            @Html.ValidationMessageFor(model => model.edad)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

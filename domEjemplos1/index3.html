@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>Parrafo1</p>
+    <p>Parrafo2</p>
+    <p>Parrafo3</p>
+    <input type="text" id="texto1" />
+    <script>
+        /*Aprendemos como tomar el control
+        por medio de su etiqueta o TAG*/
+        var parrafos = document.getElementsByTagName("p");
+        
+        var primerParrafo = parrafos[0];
+        document.getElementById("texto1").value = primerParrafo.textContent;
+
+        /*Ahora recorro todos los parrafos o el arreglo de
+        parrafos, */
+        for (var i = 0; i<parrafos.length; i++) {
+            alert("El parafo vale" + parrafos[i].textContent);
+        }
+        document.write("\t Esto \'es\' un mensaje"+ " \n Esto debera aparecer en abajo");
+        alert("Mensaje con brinco con \n brinco de linea ");
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+d:\vibeco\documents\visual studio 2012\Projects\subirArchivo\subirArchivo\bin\subirArchivo.dll
+d:\vibeco\documents\visual studio 2012\Projects\subirArchivo\subirArchivo\bin\subirArchivo.pdb
+d:\vibeco\documents\visual studio 2012\Projects\subirArchivo\subirArchivo\obj\Debug\subirArchivo.csprojResolveAssemblyReference.cache
+d:\vibeco\documents\visual studio 2012\Projects\subirArchivo\subirArchivo\obj\Debug\subirArchivo.dll
+d:\vibeco\documents\visual studio 2012\Projects\subirArchivo\subirArchivo\obj\Debug\subirArchivo.pdb

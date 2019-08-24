@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Do_Guardar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_strNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_strDomicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_strTelefono" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_intEdad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_dblSaldo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_GuardarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Do_GuardarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_Eliminar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_intID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_EliminarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Do_EliminarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_Actualizar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_intID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_strNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_strDomicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_strTelefono" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_intEdad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_dblSaldo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_ActualizarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Do_ActualizarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_Verificar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_intID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_VerificarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Do_VerificarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BuscarTodo">
+        <s:complexType />
+      </s:element>
+      <s:element name="Do_BuscarTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Do_BuscarTodoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BuscarRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_intID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BuscarRegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Do_BuscarRegistroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BuscarSaldo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_intID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BuscarSaldoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Do_BuscarSaldoResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Do_GuardarSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_Guardar" />
+  </wsdl:message>
+  <wsdl:message name="Do_GuardarSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_GuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_EliminarSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="Do_EliminarSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_ActualizarSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="Do_ActualizarSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_VerificarSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_Verificar" />
+  </wsdl:message>
+  <wsdl:message name="Do_VerificarSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_VerificarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_BuscarTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_BuscarTodo" />
+  </wsdl:message>
+  <wsdl:message name="Do_BuscarTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_BuscarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_BuscarRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_BuscarRegistro" />
+  </wsdl:message>
+  <wsdl:message name="Do_BuscarRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_BuscarRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_BuscarSaldoSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_BuscarSaldo" />
+  </wsdl:message>
+  <wsdl:message name="Do_BuscarSaldoSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_BuscarSaldoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="Do_Guardar">
+      <wsdl:input message="tns:Do_GuardarSoapIn" />
+      <wsdl:output message="tns:Do_GuardarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_Eliminar">
+      <wsdl:input message="tns:Do_EliminarSoapIn" />
+      <wsdl:output message="tns:Do_EliminarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_Actualizar">
+      <wsdl:input message="tns:Do_ActualizarSoapIn" />
+      <wsdl:output message="tns:Do_ActualizarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_Verificar">
+      <wsdl:input message="tns:Do_VerificarSoapIn" />
+      <wsdl:output message="tns:Do_VerificarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarTodo">
+      <wsdl:input message="tns:Do_BuscarTodoSoapIn" />
+      <wsdl:output message="tns:Do_BuscarTodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarRegistro">
+      <wsdl:input message="tns:Do_BuscarRegistroSoapIn" />
+      <wsdl:output message="tns:Do_BuscarRegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarSaldo">
+      <wsdl:input message="tns:Do_BuscarSaldoSoapIn" />
+      <wsdl:output message="tns:Do_BuscarSaldoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Do_Guardar">
+      <soap:operation soapAction="http://tempuri.org/Do_Guardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Eliminar">
+      <soap:operation soapAction="http://tempuri.org/Do_Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Actualizar">
+      <soap:operation soapAction="http://tempuri.org/Do_Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Verificar">
+      <soap:operation soapAction="http://tempuri.org/Do_Verificar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarTodo">
+      <soap:operation soapAction="http://tempuri.org/Do_BuscarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarRegistro">
+      <soap:operation soapAction="http://tempuri.org/Do_BuscarRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarSaldo">
+      <soap:operation soapAction="http://tempuri.org/Do_BuscarSaldo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Do_Guardar">
+      <soap12:operation soapAction="http://tempuri.org/Do_Guardar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Eliminar">
+      <soap12:operation soapAction="http://tempuri.org/Do_Eliminar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Actualizar">
+      <soap12:operation soapAction="http://tempuri.org/Do_Actualizar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Verificar">
+      <soap12:operation soapAction="http://tempuri.org/Do_Verificar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarTodo">
+      <soap12:operation soapAction="http://tempuri.org/Do_BuscarTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarRegistro">
+      <soap12:operation soapAction="http://tempuri.org/Do_BuscarRegistro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BuscarSaldo">
+      <soap12:operation soapAction="http://tempuri.org/Do_BuscarSaldo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.1.12:84/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.1.12:84/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

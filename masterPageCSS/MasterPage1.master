@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage1.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="estilo/estilos.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.menu ul ul').css({
+            /*esto es un comentario es un script*/
+            position: "absolute",
+            display: "none"
+        });
+
+        $('.menu li').hover(function () {
+            $(this).find('>ul').stop(true, true).slideDown('slow');
+        }, function () {
+            $(this).find('>ul').stop(true, true).slideUp('slow');
+        });
+    });
+	</script>
+</head>
+<body>
+    
+    <div id="general">
+        <div id="header">
+            <div id="logo">
+            </div>
+            <div id="banner">
+                <p>Aquí va un banner</p>
+            </div>
+            <div id="barramenu" class="menu">
+                <ul>
+                    <li><a>inicio</a></li>
+                    <li><a>nosotros</a>
+                    <ul>
+                        <li><a>Misión</a></li>
+                        <li><a>Visión</a></li>
+                    </ul></li>
+                    <li><a>productos</a></li>
+                    <li><a>servicios</a></li>
+                    <li><a>contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="cuerpo">
+            
+            <section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+              
+            </asp:ContentPlaceHolder>
+            <br />
+           <!--
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                
+                 <asp:LinkButton ID="lkbCambiarPagina" runat="server" OnClick="lkbCambiarPagina_Click">Cambiar Pagina</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
+                
+            </asp:ContentPlaceHolder>-->
+                </section>
+                
+        </div>
+    </div>
+
+</body>
+</html>

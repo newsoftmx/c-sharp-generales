@@ -1,0 +1,54 @@
+﻿body { 
+    background-color:#0094ff;
+    color:#fff;
+}
+p
+{
+    color: #ffd800;
+}
+.lopez
+{
+    font-family: Arial;
+    color: #f00;
+    font-size: x-large;
+}
+#karla {
+    color: purple;
+    font-family: 'Century Gothic';
+}
+
+#menu {
+	width:100% !important;
+	height:68px;
+	float:right;
+	margin:0px 0px 0px 0px;
+}
+.menu ul {
+	list-style:none;
+	padding:0;
+	margin:20px 0px 0px 50px;	
+}
+.menu ul ul {
+	list-style:none;
+	padding:0;
+	margin:0px 0px 0px 0px;	
+	float:left;
+}
+.menu a{
+	display:block;
+	width:140px;
+	height:25px;
+	color:#FFF;
+	text-decoration:none;
+	text-align:center;
+}
+.menu a:hover{
+	background:#015c31;
+}
+.menu li li a{
+	background:#b60a0a;
+}
+.menu li{
+	float:left;
+}
+

@@ -1,0 +1,6 @@
+e:\vibeco\documents\visual studio 2013\Projects\consumo1\consumo1\obj\Debug\consumo1.csprojResolveAssemblyReference.cache
+e:\vibeco\documents\visual studio 2013\Projects\consumo1\consumo1\bin\consumo1.dll.config
+e:\vibeco\documents\visual studio 2013\Projects\consumo1\consumo1\bin\consumo1.dll
+e:\vibeco\documents\visual studio 2013\Projects\consumo1\consumo1\bin\consumo1.pdb
+e:\vibeco\documents\visual studio 2013\Projects\consumo1\consumo1\obj\Debug\consumo1.dll
+e:\vibeco\documents\visual studio 2013\Projects\consumo1\consumo1\obj\Debug\consumo1.pdb

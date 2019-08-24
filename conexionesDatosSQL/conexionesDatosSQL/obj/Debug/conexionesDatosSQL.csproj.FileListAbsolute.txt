@@ -1,0 +1,6 @@
+d:\user\documents\visual studio 2013\Projects\conexionesDatosSQL\conexionesDatosSQL\bin\conexionesDatosSQL.dll.config
+d:\user\documents\visual studio 2013\Projects\conexionesDatosSQL\conexionesDatosSQL\bin\conexionesDatosSQL.dll
+d:\user\documents\visual studio 2013\Projects\conexionesDatosSQL\conexionesDatosSQL\bin\conexionesDatosSQL.pdb
+d:\user\documents\visual studio 2013\Projects\conexionesDatosSQL\conexionesDatosSQL\obj\Debug\conexionesDatosSQL.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2013\Projects\conexionesDatosSQL\conexionesDatosSQL\obj\Debug\conexionesDatosSQL.dll
+d:\user\documents\visual studio 2013\Projects\conexionesDatosSQL\conexionesDatosSQL\obj\Debug\conexionesDatosSQL.pdb

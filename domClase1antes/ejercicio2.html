@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="js/jsGeneral.js"></script>
+</head>
+<body>
+    <div>
+        <p>
+            <input type="text" id="pais" />
+            <input type="button" id="busqueda1" value="Clic para ejecutar función de proceso" onclick="pruebaLlamarFuncion()" />
+            <input type="submit" id="busqueda2" value="Presiona" onmouseover="pruebaLlamarFuncion2()" />
+        </p>
+    </div>
+    <script>
+<!--//Método Confirm()
+	var respuesta;
+	respuesta=confirm ("¿Desea cancelar la subscripción?");
+	document.write("Usted ha contestado que "+respuesta)
+// -->
+    </script>
+    <script>
+<!--//Método Prompt()
+  var pais;
+  pais=prompt("Introduzca la provincia ","Asturias");
+  document.write("Usted ha introducido la siguiente información "+pais)
+        // -->
+  document.getElementById("pais").value = pais;
+
+    </script>
+    <script>
+        function pruebaLlamarFuncion2() {
+            alert("Presionaste el boton, para llamar función de archivo de JS colocado al final");
+        }
+    </script>
+</body>
+</html>

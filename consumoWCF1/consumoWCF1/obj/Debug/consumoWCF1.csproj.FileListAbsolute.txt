@@ -1,0 +1,9 @@
+d:\user\documents\visual studio 2013\Projects\consumoWCF1\consumoWCF1\bin\Debug\consumoWCF1.exe.config
+D:\user\Documents\Visual Studio 2013\Projects\consumoWCF1\consumoWCF1\bin\Debug\consumoWCF1.exe
+D:\user\Documents\Visual Studio 2013\Projects\consumoWCF1\consumoWCF1\bin\Debug\consumoWCF1.pdb
+D:\user\Documents\Visual Studio 2013\Projects\consumoWCF1\consumoWCF1\obj\Debug\consumoWCF1.csprojResolveAssemblyReference.cache
+D:\user\Documents\Visual Studio 2013\Projects\consumoWCF1\consumoWCF1\obj\Debug\consumoWCF1.Form1.resources
+D:\user\Documents\Visual Studio 2013\Projects\consumoWCF1\consumoWCF1\obj\Debug\consumoWCF1.Properties.Resources.resources
+D:\user\Documents\Visual Studio 2013\Projects\consumoWCF1\consumoWCF1\obj\Debug\consumoWCF1.csproj.GenerateResource.Cache
+D:\user\Documents\Visual Studio 2013\Projects\consumoWCF1\consumoWCF1\obj\Debug\consumoWCF1.exe
+D:\user\Documents\Visual Studio 2013\Projects\consumoWCF1\consumoWCF1\obj\Debug\consumoWCF1.pdb

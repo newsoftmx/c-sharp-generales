@@ -1,0 +1,19 @@
+﻿body {
+}
+.ocultar{
+    display:none;
+}
+.ocultarPanel{
+    background:white;
+    width:60%;
+    height:auto;
+}
+.modalBackground {
+    background-color: black;
+    filter: alpha(opacity=65%);
+    opacity: 0.6;
+    z-index: 10000;
+}
+.encabezado{
+    background:#00ff21;
+}

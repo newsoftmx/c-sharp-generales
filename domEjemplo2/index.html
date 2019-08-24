@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title></title>
+    <script src="js/jsGeneral.js"></script>
+</head>
+<body>
+    <!--Aprendiendo el uso de noscript, indicará
+        un texto si el navegador no puede correr
+        los script-->
+    <noscript>
+        <p>
+            Su navegador no puede ejecutar script
+        </p>
+    </noscript>
+    <div>
+        <p>
+            <label id="lblCambiar">Si cumple la 
+            condición se cambiará el texto</label>
+            <input type="text" id="texto1" />
+            <input type="button" value="Verificar" 
+                   onclick="verificarIF()" /><br />
+            <label id="lblCambiar2">Si escribe 1 cambia</label>
+            <input type="text" id="texto2" />
+            <input type="text" id="texto3" />
+            <input type="button" value="Aceptar" onclick="verificarParametro(texto2.value, texto3.value)" />
+            <input type="button" value="Valor" onclick="verificarValor('Hola')" />
+            <br />
+            <input type="text" name="ciudadesGto" id="ciudad" list="ciudadesGto">
+            <label id="ciudades"></label>
+            <input type="button" value="Verificar Ciudad" />
+            <datalist id="ciudadesGto">
+                <option value="León de los Aldama"></option>
+                <option value="Romita"></option>
+                <option value="Penjamo"></option>
+            </datalist>
+        </p>
+
+    </div>
+</body>
+</html>

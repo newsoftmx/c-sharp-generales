@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="utf-8" />
+    <title>Uso del DOM</title>
+</head>
+<body>
+    <p>Iniciando aprendizaje de DOM</p>
+    <p>DOM es sencillo</p>
+    <p>Tiene una gran potencia</p>
+    <p><input type="text" id="texto1" /></p>
+    <script>
+        /*1 Lo primero a realizar es la obtención del objeto
+        raiz que representa el elemento raiz de la pagina*/
+        var objetoHTMLWEB = document.documentElement;
+        /*var nombre = "luis";*/
+        /*alert("la variable vale " + objetoHTML);*/
+    </script>
+    <script>
+        /* 2  Obtenemos los nodos hijos de document, los cuales
+        son head y body, los paso a variables*/
+        var objetoHead = objetoHTMLWEB.firstChild;
+        var objetoBody = objetoHTMLWEB.lastChild;
+    </script>
+    <script>
+        /*3 Ahora obtengo los nodos usando la propiedad childNodes
+        solo tengo en este moemnto a head y body, se realiza
+        como si fuesen arreglo, osea el primero valor es 0
+        */
+        var objetoHeadChildNodes = objetoHTMLWEB.childNodes[0];
+        var objetoBodyChildNodes = objetoHTMLWEB.childNodes[1];
+        document.writeln("La variable Head vale: " + objetoBodyChildNodes + "\n");
+        document.write("Linea de prueba");
+        /*En ocasiones es importante conocer todos los nodos hijo
+        que tiene un nodo, para esto usamos length */
+        var objetoNumeroNodos = objetoHTMLWEB.childNodes.length;
+        document.getElementById("texto1").value = objetoNumeroNodos;
+
+        /*También podemos acceder a un objeto directamente,
+        por ejemplo el body*/
+        var objetoBodyDirecto = document.body;
+    </script>
+    <script>
+        /*tipo de nodo*/
+        alert(document.nodeType);
+    </script>
+</body>
+</html>

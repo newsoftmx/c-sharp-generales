@@ -1,0 +1,80 @@
+﻿body {
+    background:#000000;
+}
+
+h1{
+    background-color:#FFbb00;
+}
+p{
+    margin:5cm 2cm 3cm 4cm;
+}
+.h1{
+    background-color:#00AA11;
+}
+.menu a{
+    /*esto es para los hipervinculos*/
+    color:#FFF;
+    display:block;
+    height:26px;
+    /*la sig línea quita el subrayado al enlace*/
+    text-decoration:none;
+    text-align:center;
+    width:143px;
+}
+.menu a:hover{
+    background:#015c31;
+}
+.menu li{
+    float:left;
+}
+.menu li li a{
+    background:#b60a0a;
+}
+.menu ul{
+    list-style:none;
+    margin:20px 0px 0px 20px;
+    padding:.5em;
+}
+.menu ul ul{
+    list-style:none;
+    float:left;
+}
+
+#alex{
+    border:dotted;
+    padding:.2em;
+}
+#h1{background-color:#EF1616;}
+#imagen{
+    background-image:url('../img/emprende (1).jpg');
+    float:left;
+    height:100px;
+    width:20%;
+}
+
+#lalo{
+    background-color:#296F17;
+    font-family:'Adobe Arabic';
+    height:200px;
+    margin:.5em;
+    padding:1em 2em 5em 8em;
+    width:100%;
+}
+#menu{
+    float:right;
+    height:70px;
+    margin:0px;
+}
+#nombreEmpresa{
+    color:#0026ff;
+    float:left;
+    font-family:Batang;
+    font-size:1.5em;
+    /*margin-left:1cm;*/
+    padding-left:1cm;
+}
+
+
+
+
+

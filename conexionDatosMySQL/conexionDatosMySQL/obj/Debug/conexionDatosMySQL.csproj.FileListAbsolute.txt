@@ -1,0 +1,6 @@
+d:\user\documents\visual studio 2013\Projects\conexionDatosMySQL\conexionDatosMySQL\bin\conexionDatosMySQL.dll.config
+d:\user\documents\visual studio 2013\Projects\conexionDatosMySQL\conexionDatosMySQL\bin\conexionDatosMySQL.dll
+d:\user\documents\visual studio 2013\Projects\conexionDatosMySQL\conexionDatosMySQL\bin\conexionDatosMySQL.pdb
+d:\user\documents\visual studio 2013\Projects\conexionDatosMySQL\conexionDatosMySQL\obj\Debug\conexionDatosMySQL.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2013\Projects\conexionDatosMySQL\conexionDatosMySQL\obj\Debug\conexionDatosMySQL.dll
+d:\user\documents\visual studio 2013\Projects\conexionDatosMySQL\conexionDatosMySQL\obj\Debug\conexionDatosMySQL.pdb

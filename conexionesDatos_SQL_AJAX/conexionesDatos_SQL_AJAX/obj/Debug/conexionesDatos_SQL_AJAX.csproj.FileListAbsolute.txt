@@ -1,0 +1,6 @@
+d:\user\documents\visual studio 2013\Projects\conexionesDatos_SQL_AJAX\conexionesDatos_SQL_AJAX\bin\conexionesDatos_SQL_AJAX.dll.config
+d:\user\documents\visual studio 2013\Projects\conexionesDatos_SQL_AJAX\conexionesDatos_SQL_AJAX\bin\conexionesDatos_SQL_AJAX.dll
+d:\user\documents\visual studio 2013\Projects\conexionesDatos_SQL_AJAX\conexionesDatos_SQL_AJAX\bin\conexionesDatos_SQL_AJAX.pdb
+d:\user\documents\visual studio 2013\Projects\conexionesDatos_SQL_AJAX\conexionesDatos_SQL_AJAX\obj\Debug\conexionesDatos_SQL_AJAX.dll
+d:\user\documents\visual studio 2013\Projects\conexionesDatos_SQL_AJAX\conexionesDatos_SQL_AJAX\obj\Debug\conexionesDatos_SQL_AJAX.pdb
+D:\user\Documents\Visual Studio 2013\Projects\conexionesDatos_SQL_AJAX\conexionesDatos_SQL_AJAX\obj\Debug\conexionesDatos_SQL_AJAX.csprojResolveAssemblyReference.cache

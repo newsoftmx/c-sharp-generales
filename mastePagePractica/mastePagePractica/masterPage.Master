@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="masterPage.master.cs" Inherits="mastePagePractica.masterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/estilos.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <header>
+
+        </header>
+        <section>
+            <!-- este contenedor es el general-->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Contenedor3" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Contenedor4" runat="server">
+                <p>Si esto aparece es por que su página no usa este contenedor4</p>
+            </asp:ContentPlaceHolder>
+        </section>
+        <section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                <p>Si esto aparece es por que su página no usa este ContentPlaceHolder4</p>
+            </asp:ContentPlaceHolder>
+        </section>
+        <section>
+            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        </section>
+        <aside> barra de estado</aside>
+        <footer></footer>
+    </div>
+    </form>
+</body>
+</html>

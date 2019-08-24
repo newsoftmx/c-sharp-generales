@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRMNewRestaurantWModelStoreContainer" CdmEntityContainer="CRMNewRestaurantWEntities">
+    <EntitySetMapping Name="carritoes">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.carrito">
+        <MappingFragment StoreEntitySet="carrito">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categorias">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.categoria">
+        <MappingFragment StoreEntitySet="categorias">
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciudades">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.ciudade">
+        <MappingFragment StoreEntitySet="ciudades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientes">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.cliente">
+        <MappingFragment StoreEntitySet="clientes">
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="empresa" ColumnName="empresa" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+          <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="calle" ColumnName="calle" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="idColonia" ColumnName="idColonia" />
+          <ScalarProperty Name="calle1" ColumnName="calle1" />
+          <ScalarProperty Name="calle2" ColumnName="calle2" />
+          <ScalarProperty Name="municipio" ColumnName="municipio" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="colonias">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.colonia">
+        <MappingFragment StoreEntitySet="colonias">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="consecutivoPedidoes">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.consecutivoPedido">
+        <MappingFragment StoreEntitySet="consecutivoPedido">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estados">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.estado">
+        <MappingFragment StoreEntitySet="estados">
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedidos">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.pedido">
+        <MappingFragment StoreEntitySet="pedidos">
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idCarrito" ColumnName="idCarrito" />
+          <ScalarProperty Name="tipoVenta" ColumnName="tipoVenta" />
+          <ScalarProperty Name="destino" ColumnName="destino" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="recibidoMatriz" ColumnName="recibidoMatriz" />
+          <ScalarProperty Name="facturar" ColumnName="facturar" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productos">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.producto">
+        <MappingFragment StoreEntitySet="productos">
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="costoProduccion" ColumnName="costoProduccion" />
+          <ScalarProperty Name="precio1" ColumnName="precio1" />
+          <ScalarProperty Name="precio2" ColumnName="precio2" />
+          <ScalarProperty Name="precio3" ColumnName="precio3" />
+          <ScalarProperty Name="precio4" ColumnName="precio4" />
+          <ScalarProperty Name="unidadMedida" ColumnName="unidadMedida" />
+          <ScalarProperty Name="existencia" ColumnName="existencia" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="promociones">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.promocione">
+        <MappingFragment StoreEntitySet="promociones">
+          <ScalarProperty Name="idPromocion" ColumnName="idPromocion" />
+          <ScalarProperty Name="idConsecutivoPromocion" ColumnName="idConsecutivoPromocion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="dias" ColumnName="dias" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apePaterno" ColumnName="apePaterno" />
+          <ScalarProperty Name="apeMaterno" ColumnName="apeMaterno" />
+          <ScalarProperty Name="calle" ColumnName="calle" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="colonia" ColumnName="colonia" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewColonias">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.viewColonia">
+        <MappingFragment StoreEntitySet="viewColonias">
+          <ScalarProperty Name="idColonia" ColumnName="idColonia" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="condiciones">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.condicione">
+        <MappingFragment StoreEntitySet="condiciones">
+          <ScalarProperty Name="idCondiciones" ColumnName="idCondiciones" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="consecutivoCarritoes">
+      <EntityTypeMapping TypeName="CRMNewRestaurantWModel.consecutivoCarrito">
+        <MappingFragment StoreEntitySet="consecutivoCarrito">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idCarrito" ColumnName="idCarrito" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="CRMNewRestaurantWModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="CRMNewRestaurantWModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="CRMNewRestaurantWModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="CRMNewRestaurantWModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRMNewRestaurantWModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="CRMNewRestaurantWModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRMNewRestaurantWModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="CRMNewRestaurantWModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="CRMNewRestaurantWModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

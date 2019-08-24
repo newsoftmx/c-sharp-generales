@@ -1,0 +1,10 @@
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\bin\wcf1.dll.config
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\bin\wcf1.dll
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\bin\wcf1.pdb
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\bin\EntityFramework.dll
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\bin\EntityFramework.SqlServer.dll
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\bin\EntityFramework.xml
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\bin\EntityFramework.SqlServer.xml
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\obj\Release\wcf1.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\obj\Release\wcf1.dll
+d:\user\documents\visual studio 2013\Projects\wcf1\wcf1\obj\Release\wcf1.pdb

@@ -1,0 +1,9 @@
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\bin\Debug\invocacionWSVB.exe.config
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\bin\Debug\invocacionWSVB.exe
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\bin\Debug\invocacionWSVB.pdb
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\obj\Debug\invocacionWSVB.csprojResolveAssemblyReference.cache
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\obj\Debug\invocacionWSVB.Form1.resources
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\obj\Debug\invocacionWSVB.Properties.Resources.resources
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\obj\Debug\invocacionWSVB.csproj.GenerateResource.Cache
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\obj\Debug\invocacionWSVB.exe
+d:\vibeco\documents\visual studio 2012\Projects\invocacionWSVB\invocacionWSVB\obj\Debug\invocacionWSVB.pdb

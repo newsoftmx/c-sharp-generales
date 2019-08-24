@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRMNewRestaurantWModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="carrito">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="precio" Type="Double" Nullable="false" />
+    <NavigationProperty Name="producto" Relationship="Self.FK_carrito_productos" FromRole="carrito" ToRole="productos" />
+    <NavigationProperty Name="consecutivoCarritoes" Relationship="Self.FK_consecutivoCarrito_carrito" FromRole="carrito" ToRole="consecutivoCarrito" />
+    <NavigationProperty Name="pedidos" Relationship="Self.FK_pedidos_carrito" FromRole="carrito" ToRole="pedidos" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="productos" Relationship="Self.FK_productos_categorias" FromRole="categorias" ToRole="productos" />
+  </EntityType>
+  <EntityType Name="ciudade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="estado" Relationship="Self.FK_ciudades_estados" FromRole="ciudades" ToRole="estados" />
+    <NavigationProperty Name="colonias" Relationship="Self.FK_colonias_ciudades" FromRole="ciudades" ToRole="colonias" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="idCliente" />
+    </Key>
+    <Property Name="idCliente" Type="Int32" Nullable="false" />
+    <Property Name="empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apePaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apeMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rfc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="telefono" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="calle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="numero" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="cp" Type="Int32" Nullable="false" />
+    <Property Name="idColonia" Type="Int32" Nullable="false" />
+    <Property Name="calle1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="calle2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="municipio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="estatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="saldo" Type="Double" Nullable="false" />
+    <Property Name="observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="colonia" Relationship="Self.FK_clientes_colonias" FromRole="clientes" ToRole="colonias" />
+    <NavigationProperty Name="pedidos" Relationship="Self.FK_pedidos_clientes" FromRole="clientes" ToRole="pedidos" />
+  </EntityType>
+  <EntityType Name="colonia">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cp" Type="Int32" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="idCiudad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ciudade" Relationship="Self.FK_colonias_ciudades" FromRole="colonias" ToRole="ciudades" />
+    <NavigationProperty Name="clientes" Relationship="Self.FK_clientes_colonias" FromRole="colonias" ToRole="clientes" />
+  </EntityType>
+  <EntityType Name="consecutivoPedido">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idPedido" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Double" Nullable="false" />
+    <Property Name="precio" Type="Double" Nullable="false" />
+    <NavigationProperty Name="pedido" Relationship="Self.FK_consecutivoPedido_pedidos" FromRole="consecutivoPedido" ToRole="pedidos" />
+    <NavigationProperty Name="producto" Relationship="Self.FK_consecutivoPedido_productos" FromRole="consecutivoPedido" ToRole="productos" />
+  </EntityType>
+  <EntityType Name="estado">
+    <Key>
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ciudades" Relationship="Self.FK_ciudades_estados" FromRole="estados" ToRole="ciudades" />
+  </EntityType>
+  <EntityType Name="pedido">
+    <Key>
+      <PropertyRef Name="idPedido" />
+    </Key>
+    <Property Name="idPedido" Type="Int32" Nullable="false" />
+    <Property Name="idCliente" Type="Int32" Nullable="false" />
+    <Property Name="idCarrito" Type="Int32" Nullable="false" />
+    <Property Name="tipoVenta" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="destino" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="recibidoMatriz" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="facturar" Type="Boolean" Nullable="false" />
+    <Property Name="total" Type="Double" Nullable="false" />
+    <NavigationProperty Name="carrito" Relationship="Self.FK_pedidos_carrito" FromRole="pedidos" ToRole="carrito" />
+    <NavigationProperty Name="cliente" Relationship="Self.FK_pedidos_clientes" FromRole="pedidos" ToRole="clientes" />
+    <NavigationProperty Name="consecutivoPedidoes" Relationship="Self.FK_consecutivoPedido_pedidos" FromRole="pedidos" ToRole="consecutivoPedido" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="costoProduccion" Type="Double" Nullable="false" />
+    <Property Name="precio1" Type="Double" Nullable="false" />
+    <Property Name="precio2" Type="Double" Nullable="false" />
+    <Property Name="precio3" Type="Double" Nullable="false" />
+    <Property Name="precio4" Type="Double" Nullable="false" />
+    <Property Name="unidadMedida" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="existencia" Type="Double" Nullable="false" />
+    <Property Name="fechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="carritoes" Relationship="Self.FK_carrito_productos" FromRole="productos" ToRole="carrito" />
+    <NavigationProperty Name="categoria" Relationship="Self.FK_productos_categorias" FromRole="productos" ToRole="categorias" />
+    <NavigationProperty Name="consecutivoPedidoes" Relationship="Self.FK_consecutivoPedido_productos" FromRole="productos" ToRole="consecutivoPedido" />
+  </EntityType>
+  <EntityType Name="promocione">
+    <Key>
+      <PropertyRef Name="idPromocion" />
+    </Key>
+    <Property Name="idPromocion" Type="Int32" Nullable="false" />
+    <Property Name="idConsecutivoPromocion" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dias" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="precio" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apePaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apeMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="calle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="numero" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="colonia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="estatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="viewColonia">
+    <Key>
+      <PropertyRef Name="idColonia" />
+    </Key>
+    <Property Name="idColonia" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cp" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="condicione">
+    <Key>
+      <PropertyRef Name="idCondiciones" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Name="idCondiciones" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="consecutivoCarrito">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="idCarrito" />
+      <PropertyRef Name="idProducto" />
+      <PropertyRef Name="cantidad" />
+      <PropertyRef Name="precio" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idCarrito" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="carrito" Relationship="Self.FK_consecutivoCarrito_carrito" FromRole="consecutivoCarrito" ToRole="carrito" />
+  </EntityType>
+  <Association Name="FK_carrito_productos">
+    <End Role="productos" Type="Self.producto" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="carrito" Type="Self.carrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="carrito">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_consecutivoCarrito_carrito">
+    <End Role="carrito" Type="Self.carrito" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="consecutivoCarrito" Type="Self.consecutivoCarrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="carrito">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="consecutivoCarrito">
+        <PropertyRef Name="idCarrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidos_carrito">
+    <End Role="carrito" Type="Self.carrito" Multiplicity="1" />
+    <End Role="pedidos" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="carrito">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedidos">
+        <PropertyRef Name="idCarrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_categorias">
+    <End Role="categorias" Type="Self.categoria" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="productos" Type="Self.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorias">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="productos">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ciudades_estados">
+    <End Role="estados" Type="Self.estado" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ciudades" Type="Self.ciudade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estados">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="ciudades">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_colonias_ciudades">
+    <End Role="ciudades" Type="Self.ciudade" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="colonias" Type="Self.colonia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudades">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="colonias">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientes_colonias">
+    <End Role="colonias" Type="Self.colonia" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="clientes" Type="Self.cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="colonias">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="clientes">
+        <PropertyRef Name="idColonia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidos_clientes">
+    <End Role="clientes" Type="Self.cliente" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="pedidos" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="pedidos">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_consecutivoPedido_pedidos">
+    <End Role="pedidos" Type="Self.pedido" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="consecutivoPedido" Type="Self.consecutivoPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedidos">
+        <PropertyRef Name="idPedido" />
+      </Principal>
+      <Dependent Role="consecutivoPedido">
+        <PropertyRef Name="idPedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_consecutivoPedido_productos">
+    <End Role="productos" Type="Self.producto" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="consecutivoPedido" Type="Self.consecutivoPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="consecutivoPedido">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CRMNewRestaurantWEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="carritoes" EntityType="Self.carrito" />
+    <EntitySet Name="categorias" EntityType="Self.categoria" />
+    <EntitySet Name="ciudades" EntityType="Self.ciudade" />
+    <EntitySet Name="clientes" EntityType="Self.cliente" />
+    <EntitySet Name="colonias" EntityType="Self.colonia" />
+    <EntitySet Name="consecutivoPedidoes" EntityType="Self.consecutivoPedido" />
+    <EntitySet Name="estados" EntityType="Self.estado" />
+    <EntitySet Name="pedidos" EntityType="Self.pedido" />
+    <EntitySet Name="productos" EntityType="Self.producto" />
+    <EntitySet Name="promociones" EntityType="Self.promocione" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="usuarios" EntityType="Self.usuario" />
+    <EntitySet Name="viewColonias" EntityType="Self.viewColonia" />
+    <EntitySet Name="condiciones" EntityType="Self.condicione" />
+    <EntitySet Name="consecutivoCarritoes" EntityType="Self.consecutivoCarrito" />
+    <AssociationSet Name="FK_carrito_productos" Association="Self.FK_carrito_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="carrito" EntitySet="carritoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_consecutivoCarrito_carrito" Association="Self.FK_consecutivoCarrito_carrito">
+      <End Role="carrito" EntitySet="carritoes" />
+      <End Role="consecutivoCarrito" EntitySet="consecutivoCarritoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidos_carrito" Association="Self.FK_pedidos_carrito">
+      <End Role="carrito" EntitySet="carritoes" />
+      <End Role="pedidos" EntitySet="pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_categorias" Association="Self.FK_productos_categorias">
+      <End Role="categorias" EntitySet="categorias" />
+      <End Role="productos" EntitySet="productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ciudades_estados" Association="Self.FK_ciudades_estados">
+      <End Role="estados" EntitySet="estados" />
+      <End Role="ciudades" EntitySet="ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_colonias_ciudades" Association="Self.FK_colonias_ciudades">
+      <End Role="ciudades" EntitySet="ciudades" />
+      <End Role="colonias" EntitySet="colonias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientes_colonias" Association="Self.FK_clientes_colonias">
+      <End Role="colonias" EntitySet="colonias" />
+      <End Role="clientes" EntitySet="clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidos_clientes" Association="Self.FK_pedidos_clientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="pedidos" EntitySet="pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_consecutivoPedido_pedidos" Association="Self.FK_consecutivoPedido_pedidos">
+      <End Role="pedidos" EntitySet="pedidos" />
+      <End Role="consecutivoPedido" EntitySet="consecutivoPedidoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_consecutivoPedido_productos" Association="Self.FK_consecutivoPedido_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="consecutivoPedido" EntitySet="consecutivoPedidoes" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(CRMNewRestaurantWModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(CRMNewRestaurantWModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

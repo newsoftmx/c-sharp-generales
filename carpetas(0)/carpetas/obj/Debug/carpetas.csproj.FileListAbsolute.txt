@@ -1,0 +1,6 @@
+d:\user\documents\visual studio 2013\Projects\carpetas\carpetas\obj\Debug\carpetas.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2013\Projects\carpetas\carpetas\bin\carpetas.dll.config
+d:\user\documents\visual studio 2013\Projects\carpetas\carpetas\bin\carpetas.dll
+d:\user\documents\visual studio 2013\Projects\carpetas\carpetas\bin\carpetas.pdb
+d:\user\documents\visual studio 2013\Projects\carpetas\carpetas\obj\Debug\carpetas.dll
+d:\user\documents\visual studio 2013\Projects\carpetas\carpetas\obj\Debug\carpetas.pdb

@@ -1,0 +1,12 @@
+e:\vibeco\documents\visual studio 2013\Projects\plataforma\plataforma\obj\Debug\plataforma.csprojResolveAssemblyReference.cache
+e:\vibeco\documents\visual studio 2013\Projects\plataforma\plataforma\bin\plataforma.dll.config
+e:\vibeco\documents\visual studio 2013\Projects\plataforma\plataforma\bin\plataforma.dll
+e:\vibeco\documents\visual studio 2013\Projects\plataforma\plataforma\bin\plataforma.pdb
+e:\vibeco\documents\visual studio 2013\Projects\plataforma\plataforma\obj\Debug\plataforma.dll
+e:\vibeco\documents\visual studio 2013\Projects\plataforma\plataforma\obj\Debug\plataforma.pdb
+D:\user\Documents\Visual Studio 2013\Projects\plataforma\plataforma\bin\plataforma.dll.config
+D:\user\Documents\Visual Studio 2013\Projects\plataforma\plataforma\bin\plataforma.dll
+D:\user\Documents\Visual Studio 2013\Projects\plataforma\plataforma\bin\plataforma.pdb
+D:\user\Documents\Visual Studio 2013\Projects\plataforma\plataforma\obj\Debug\plataforma.csprojResolveAssemblyReference.cache
+D:\user\Documents\Visual Studio 2013\Projects\plataforma\plataforma\obj\Debug\plataforma.dll
+D:\user\Documents\Visual Studio 2013\Projects\plataforma\plataforma\obj\Debug\plataforma.pdb

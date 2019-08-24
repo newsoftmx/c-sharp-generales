@@ -1,0 +1,6 @@
+d:\user\documents\visual studio 2013\Projects\wcfClase1\wcfClase1\bin\wcfClase1.dll.config
+d:\user\documents\visual studio 2013\Projects\wcfClase1\wcfClase1\bin\wcfClase1.dll
+d:\user\documents\visual studio 2013\Projects\wcfClase1\wcfClase1\bin\wcfClase1.pdb
+d:\user\documents\visual studio 2013\Projects\wcfClase1\wcfClase1\obj\Debug\wcfClase1.csprojResolveAssemblyReference.cache
+d:\user\documents\visual studio 2013\Projects\wcfClase1\wcfClase1\obj\Debug\wcfClase1.dll
+d:\user\documents\visual studio 2013\Projects\wcfClase1\wcfClase1\obj\Debug\wcfClase1.pdb
